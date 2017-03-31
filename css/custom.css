@@ -1,0 +1,26 @@
+/* CUSTOMIZAÇÃO DO HEADER */
+.navbar { 
+  margin-bottom: 0px; 
+}
+
+/* CUSTOMIZAÇÃO DO FOOTER */
+.panel {
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+
+/* CUSTOMIZAÇÃO DO CADASTRO */
+
+fieldset{
+	margin:1% auto;
+}
+
+.box-mensagem-crud{ 
+	margin-top: 10px;
+}
+
+.msg-erro{
+	color: red; 
+}
+
