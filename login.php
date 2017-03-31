@@ -25,7 +25,7 @@
 
         <div class="form-group ls-login-user">
           <label for="userLogin">E-mail</label>
-          <input class="form-control ls-login-bg-user input-lg" id="userLogin" aria-label="E-mail" placeholder="Usuário" type="text">
+          <input class="form-control ls-login-bg-user input-lg" id="userLogin" aria-label="E-mail" placeholder="E-mail" type="text">
         </div>
 
         <div class="form-group ls-login-password">
