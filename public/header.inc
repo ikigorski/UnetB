@@ -9,14 +9,14 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
-			</button>			  
+			</button>
 		</div>
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><img src="../images/logo.png"/></li>
 				<li class="active"><a href="../index.php">HOME<span class="sr-only">(current)</span></a></li>
-				<li><a href="../public/sobre.php">SOBRE</a></li>					
+				<li><a href="../public/sobre.php">SOBRE</a></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
