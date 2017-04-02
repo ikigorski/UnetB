@@ -14,10 +14,10 @@
   <body style="height: 100%;">
 
 	   <?php
-		   include "public/header.inc";
+		   include "../public/header.inc";
 	   ?>
 
-<div class="box-parent-login">
+<div class="container">
   <div class="well bg-white box-login">
     <h1 class="ls-login-logo">UnetB</h1>
     <form role="form">
@@ -37,7 +37,7 @@
 
         <input value="Entrar" class="btn btn-primary btn-lg btn-block" type="submit">
         <p class="txt-center ls-login-signup">Não possui conta no UnetB?
-          <a href="#">Cadastre-se agora</a>
+          <a href="user_registration.php">Cadastre-se agora</a>
         </p>
 
       </fieldset>

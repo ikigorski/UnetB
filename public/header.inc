@@ -1,6 +1,6 @@
 <!-- MENU DE NAVEGAÇÃO DO TOPO!-->
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
 		<!-- PERMITE A NAVEGAÇÃO EM DISPOSITIVOS MOBILE!-->
 		<div class="navbar-header">
@@ -24,7 +24,7 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">USUÁRIO<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="login.php">Entrar</a></li>
+						<li><a href="../public/login.php">Entrar</a></li>
 						<li><a href="#">Perfil</a></li>
 						<li><a href="#">Something else here</a></li>
 						<li role="separator" class="divider"></li>
