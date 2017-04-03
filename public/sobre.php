@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" style="height: 100%;">
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8">
@@ -11,14 +11,23 @@
 	<link href="../css/custom.css" rel="stylesheet">
 </head>
  
-<body style="height: 100%;">
+<body style="margin: 0 0 70px;">
 	
 	<?php
 		include "header.inc";
 	?>	
 
-	<h1>Em Construção</h1>
+	<h1>Em Construção 1</h1>
+	<h1>Em Construção 2</h1>
+	<h1>Em Construção 3</h1>
+	<h1>Em Construção 4</h1>
+	<h1>Em Construção 5</h1>
+	<h1>Em Construção 6</h1>
+	<h1>Em Construção 7</h1>
+	<h1>Em Construção 8</h1>
 
+
+	
 	<?php
 		include "footer.inc";
 	?>

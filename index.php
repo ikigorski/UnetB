@@ -17,7 +17,7 @@
 		include "public/header.inc";
 	?>	
 	
-	<div id="mapa" style="height: 100%; margin-bottom: auto;"></div>
+	<div id="mapa" style="height: 100%; margin-bottom: relative;"></div>
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAXumgSxD3IY_5VhkxwyEQcbBVOS55H-xQ&amp;sensor=false"></script>
 	<script src="js/mapa.js"></script>	
 

@@ -11,7 +11,7 @@
 	<link href="../css/custom.css" rel="stylesheet">
 </head>
 
-<body style="height: 100%;">
+<body>
 
 	<?php
 		include "header.inc";

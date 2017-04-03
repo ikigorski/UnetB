@@ -1,6 +1,6 @@
 <!-- MENU DE NAVEGAÇÃO DO TOPO!-->
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<!-- PERMITE A NAVEGAÇÃO EM DISPOSITIVOS MOBILE!-->
 		<div class="navbar-header">
@@ -10,11 +10,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
+			<a class="navbar-brand" href="../index.php">UNetB</a>
+			<img src="../images/logo.png"/>
 		</div>
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><img src="../images/logo.png"/></li>
 				<li class="active"><a href="../index.php">HOME<span class="sr-only">(current)</span></a></li>
 				<li><a href="../public/sobre.php">SOBRE</a></li>
 			</ul>
