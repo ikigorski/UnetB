@@ -11,7 +11,7 @@
 	<link href="../css/custom.css" rel="stylesheet">
 </head>
  
-<body style="margin: 0 0 70px;">
+<body>
 	
 	<?php
 		include "header.inc";
