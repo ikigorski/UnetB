@@ -11,23 +11,18 @@
 		<link href="css/custom.css" rel="stylesheet">
 	</head>
  
-	<body  style="margin: 0 0 60px";>
-
+	<body>
+	
 		<?php
 			include "public/header.inc";
-		?>	
-		
-		<div id="map"></div>	
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXumgSxD3IY_5VhkxwyEQcbBVOS55H-xQ&callback=initMap"></script> 	
-
-		
-
-		<?php
-			include "public/footer.inc";
 		?>
+		
+		<div id="map" style="height: 100%;"></div>
+  	
 		
 	</body>
 
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXumgSxD3IY_5VhkxwyEQcbBVOS55H-xQ&callback=initMap"></script>
 <script src="js/mapa.js"></script>
 <script src="js/jquery.min.js"></script>    
 <script src="js/bootstrap.min.js"></script>

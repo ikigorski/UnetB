@@ -1,6 +1,19 @@
-body{
-	margin: 0 0 60px;
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 50px; /* .push must be the same height as .footer */
+}
+
 /* CUSTOMIZAÇÃO DO HEADER */
 .navbar{ 
 	margin-bottom: 0px; 
@@ -26,9 +39,5 @@ fieldset{
 	color: red; 
 }
 
-#map{
-	height: 600px;
-	width: 1000px;
-	margin: auto auto auto 100px;
-}
+
 

@@ -95,7 +95,7 @@
 	</div>
 
 		<?php
-			include "../public/footer.inc";
+			include "..public/footer.inc";
 		?>
 	</body>
 

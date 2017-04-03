@@ -12,23 +12,28 @@
 </head>
  
 <body>
+
+
+	<div class="wrapper">
+		<?php
+			include "header.inc";
+		?>
 	
-	<?php
-		include "header.inc";
-	?>	
-
-	<h1>Em Construção 1</h1>
-	<h1>Em Construção 2</h1>
-	<h1>Em Construção 3</h1>
-	<h1>Em Construção 4</h1>
+		<h1>Em Construção 1</h1>
+		<h1>Em Construção 2</h1>
+		<h1>Em Construção 3</h1>
+		<h1>Em Construção 4</h1>
+  		<div class="push"></div>
+  		
+	</div>	
 	
 
-
-
 	
-	<?php
-		include "footer.inc";
-	?>
+	<div class="footer">
+  		<?php
+			include "../public/footer.inc";
+		?>
+	</div>
     
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
