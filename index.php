@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" style="height: 100%;">
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8">
@@ -11,15 +11,15 @@
 	<link href="css/custom.css" rel="stylesheet">
 </head>
  
-<body style="height: 100%;">
+<body>
 
 	<?php
 		include "public/header.inc";
 	?>	
 	
-	<div id="mapa" style="height: 100%; margin-bottom: relative;"></div>
-	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAXumgSxD3IY_5VhkxwyEQcbBVOS55H-xQ&amp;sensor=false"></script>
-	<script src="js/mapa.js"></script>	
+	<div id="map"></div>
+	
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXumgSxD3IY_5VhkxwyEQcbBVOS55H-xQ&callback=initMap"></script> 	
 
 	
 
@@ -31,6 +31,7 @@
 	
 	
 </body>
+<script src="js/mapa.js"></script>
 <script src="js/jquery.min.js"></script>    
 <script src="js/bootstrap.min.js"></script>
 </html>
