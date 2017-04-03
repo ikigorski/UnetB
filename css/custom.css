@@ -1,15 +1,16 @@
+body{
+	margin: 0 0 60px;
+}
 /* CUSTOMIZAÇÃO DO HEADER */
-.navbar { 
-  margin-bottom: 0px; 
+.navbar{ 
+	margin-bottom: 0px; 
 }
 
 /* CUSTOMIZAÇÃO DO FOOTER */
-.panel {
-  margin-bottom: 0px;
-  text-align: center;
-  
+.panel{
+	margin-bottom: 0px;
+	text-align: center;
 }
-
 
 /* CUSTOMIZAÇÃO DO CADASTRO */
 
@@ -26,10 +27,8 @@ fieldset{
 }
 
 #map{
-		height: 600px;
-        
-        width: 1000px;
-        margin: auto auto auto 100px;
-	
-    }
+	height: 600px;
+	width: 1000px;
+	margin: auto auto auto 100px;
+}
 

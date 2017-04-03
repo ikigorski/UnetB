@@ -91,9 +91,15 @@
 			    </button>
 			</form>
 		</fieldset>
+	
 	</div>
+
+		<?php
+			include "../public/footer.inc";
+		?>
+	</body>
+
 	<script type="text/javascript" src="../js/valida_cadastro.js"></script>	
 	<script src="../js/jquery.min.js"></script>    
 	<script src="../js/bootstrap.min.js"></script>
-</body>
 </html>
