@@ -10,27 +10,32 @@
 	<link href="../css/bootstrap.css" rel="stylesheet">
 	<link href="../css/custom.css" rel="stylesheet">
 </head>
- 
+
 <body>
 	
-	<?php
-		include "header.inc";
-	?>	
+	<div class="wrapper">
 
-	<h1>Em Construção 1</h1>
-	<h1>Em Construção 2</h1>
-	<h1>Em Construção 3</h1>
-	<h1>Em Construção 4</h1>
-	
+		<?php
+			include "header.inc";
+		?>
+		
+		<h1>Em Construção 1</h1>
+		<h1>Em Construção 2</h1>
+		<h1>Em Construção 3</h1>
+		<h1>Em Construção 4</h1>
+		<h1>Em Construção 1</h1>
+		<h1>Em Construção 2</h1>
 
+		<div class="push"></div>
+	</div>
+		
+	<div class="footer">
+		<?php
+			include "../public/footer.inc";
+		?>
+	</div>
 
-
-	
-	<?php
-		include "footer.inc";
-	?>
-    
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-  </body>
+</body>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 </html>

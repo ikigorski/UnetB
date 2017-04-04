@@ -1,41 +1,26 @@
 /* Atribui ao evento submit do formulário a função de validação de dados */
 var form = document.getElementById("form-contato");
+
 if (form.addEventListener){                 
     form.addEventListener("submit", validaCadastro);
-} else if (form.attachEvent){                 
-    form.attachEvent("onsubmit", validaCadastro);
 }
 
 /* Atribui ao evento keypress do input matricula a função para formatar a matrícula ##/####### */
 var inputCPF = document.getElementById("matricula");
 if (inputCPF.addEventListener) {                   
     inputCPF.addEventListener("keypress", function(){mascaraTexto(this, '##/#########')});
-} else if (inputCPF.attachEvent) {                  
-    inputCPF.attachEvent("onkeypress", function(){mascaraTexto(this, '##/#########')});
-}
-
-/* Atribui ao evento keypress do input cpf a função para formatar o CPF */
-var inputCPF = document.getElementById("cpf");
-if (inputCPF.addEventListener) {                   
-    inputCPF.addEventListener("keypress", function(){mascaraTexto(this, '###.###.###-##')});
-} else if (inputCPF.attachEvent) {                  
-    inputCPF.attachEvent("onkeypress", function(){mascaraTexto(this, '###.###.###-##')});
 }
 
 /* Atribui ao evento keypress do input data de nascimento a função para formatar o data (dd/mm/yyyy) */
 var inputDataNascimento = document.getElementById("data_nascimento");
 if (inputDataNascimento.addEventListener) {                   
     inputDataNascimento.addEventListener("keypress", function(){mascaraTexto(this, '##/##/####')});
-} else if (inputDataNascimento.attachEvent) {                  
-    inputDataNascimento.attachEvent("onkeypress", function(){mascaraTexto(this, '##/##/####')});
 }
 
 /* Atribui ao evento keypress do input celular a função para formatar o Celular (00 00000-0000) */
 var inputCelular = document.getElementById("celular");
 if (inputCelular.addEventListener) {                   
     inputCelular.addEventListener("keypress", function(){mascaraTexto(this, '## #####-####')});
-} else if (inputCelular.attachEvent) {                  
-    inputCelular.attachEvent("onkeypress", function(){mascaraTexto(this, '## #####-####')});
 }
 
 /* Atribui ao evento change do input FILE para upload da foto*/
@@ -43,8 +28,6 @@ var inputFile = document.getElementById("foto");
 var foto_cliente = document.getElementById("foto-cliente");
 if (inputFile.addEventListener) {                   
     inputFile.addEventListener("change", function(){loadFoto(this, foto_cliente)});
-} else if (inputFile.attachEvent) {                  
-    inputFile.attachEvent("onchange", function(){loadFoto(this, foto_cliente)});
 }
 
 /* Função para validar os dados antes da submissão dos dados */
@@ -53,7 +36,6 @@ function validaCadastro(evt){
 	var email = document.getElementById('email');
 	var matricula = document.getElementById('matricula');
 	var senha = document.getElementById('senha');
-	var cpf = document.getElementById('cpf');
 	var status = document.getElementById('status');	
 	var data_nascimento = document.getElementById('data_nascimento');
 	var celular = document.getElementById('celular');

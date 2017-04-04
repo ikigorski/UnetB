@@ -1,15 +1,28 @@
-body{
-	margin: 0 0 60px;
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
-/* CUSTOMIZAÇÃO DO HEADER */
-.navbar{ 
-	margin-bottom: 0px; 
+#map{
+    height: 100%; 
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+    margin-top: 50px;
+}
+.footer, .push {
+    height: 50px; /* .push must be the same height as .footer */
 }
 
 /* CUSTOMIZAÇÃO DO FOOTER */
 .panel{
 	margin-bottom: 0px;
-	text-align: center;
+    text-align: center;	
 }
 
 /* CUSTOMIZAÇÃO DO CADASTRO */
@@ -17,18 +30,9 @@ body{
 fieldset{
 	margin:1% auto;
 }
-
 .box-mensagem-crud{ 
 	margin-top: 10px;
 }
-
 .msg-erro{
 	color: red; 
 }
-
-#map{
-	height: 600px;
-	width: 1000px;
-	margin: auto auto auto 100px;
-}
-
