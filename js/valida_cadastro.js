@@ -15,19 +15,19 @@ if (inputMatricula.addEventListener) {
 }
 
 /* Atribui ao evento keypress do input data de nascimento a função para formatar o data (dd/mm/yyyy) */
-var inputDataNascimento = document.getElementById("data_nascimento");
-if (inputDataNascimento.addEventListener) {                   
-    inputDataNascimento.addEventListener("keypress", function(){mascaraTexto(this, '##/##/####')});
-} else if (inputDataNascimento.attachEvent) {                  
-    inputDataNascimento.attachEvent("onkeypress", function(){mascaraTexto(this, '##/##/####')});
+var inputbirthday = document.getElementById("birthday");
+if (inputbirthday.addEventListener) {                   
+    inputbirthday.addEventListener("keypress", function(){mascaraTexto(this, '##/##/####')});
+} else if (inputbirthday.attachEvent) {                  
+    inputbirthday.attachEvent("onkeypress", function(){mascaraTexto(this, '##/##/####')});
 }
 
 /* Atribui ao evento keypress do input celular a função para formatar o Celular (00 00000-0000) */
-var inputCelular = document.getElementById("celular");
-if (inputCelular.addEventListener) {                   
-    inputCelular.addEventListener("keypress", function(){mascaraTexto(this, '## #####-####')});
-} else if (inputCelular.attachEvent) {                  
-    inputCelular.attachEvent("onkeypress", function(){mascaraTexto(this, '## #####-####')});
+var inputphone = document.getElementById("phone");
+if (inputphone.addEventListener) {                   
+    inputphone.addEventListener("keypress", function(){mascaraTexto(this, '## #####-####')});
+} else if (inputphone.attachEvent) {                  
+    inputphone.attachEvent("onkeypress", function(){mascaraTexto(this, '## #####-####')});
 }
 
 /* Atribui ao evento change do input FILE para upload da foto*/
@@ -41,24 +41,23 @@ if (inputFile.addEventListener) {
 
 /* Função para validar os dados antes da submissão dos dados */
 function validaCadastro(evt){
-	var nome = document.getElementById('nome');
+	var name = document.getElementById('name');
 	var email = document.getElementById('email');
 	var matricula = document.getElementById('matricula');
-	var sexo = document.getElementById('sexo');
-	var data_nascimento = document.getElementById('data_nascimento');
-	var celular = document.getElementById('celular');
+	var password = document.getElementById('password');
+	var gender = document.getElementById('gender');
 	var filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 	var contErro = 0;
 
 
-	/* Validação do campo nome */
-	caixa_nome = document.querySelector('.msg-nome');
-	if(nome.value == ""){
-		caixa_nome.innerHTML = "Favor preencher o Nome";
-		caixa_nome.style.display = 'block';
+	/* Validação do campo name */
+	caixa_name = document.querySelector('.msg-name');
+	if(name.value == ""){
+		caixa_name.innerHTML = "Favor preencher o Nome";
+		caixa_name.style.display = 'block';
 		contErro += 1;
 	}else{
-		caixa_nome.style.display = 'none';
+		caixa_name.style.display = 'none';
 	}
 
 	/* Validação do campo email */
@@ -85,38 +84,28 @@ function validaCadastro(evt){
 		caixa_matricula.style.display = 'none';
 	}
 
-	/* Validação do campo Senha*/
-	caixa_senha = document.querySelector('.msg-senha');
-	if(senha.value == ""){
-		caixa_senha.innerHTML = "Favor preencher a senha";
-		caixa_senha.style.display = 'block';
+	/* Validação do campo password*/
+	caixa_password = document.querySelector('.msg-password');
+	if(password.value == ""){
+		caixa_password.innerHTML = "Favor preencher a senha";
+		caixa_password.style.display = 'block';
 		contErro += 1;
-	}else if(senha.value.length < 6){
-		caixa_senha.innerHTML = "Senha deve ter no mínimo 6 caracteres";
-		caixa_senha.style.display = 'block';
+	}else if(password.value.length < 6){
+		caixa_password.innerHTML = "Senha deve ter no mínimo 6 caracteres";
+		caixa_password.style.display = 'block';
 		contErro += 1;
 	}else{
-		caixa_senha.style.display = 'none';
+		caixa_password.style.display = 'none';
 	}
 
-	/* Validação do campo celular */
-	caixa_celular = document.querySelector('.msg-celular');
-	if(celular.value == ""){
-		caixa_celular.innerHTML = "Favor preencher o Celular";
-		caixa_celular.style.display = 'block';
+	/* Validação do campo gender */
+	caixa_gender = document.querySelector('.msg-gender');
+	if(gender.value == ""){
+		caixa_gender.innerHTML = "Favor preencher o sexo";
+		caixa_gender.style.display = 'block';
 		contErro += 1;
 	}else{
-		caixa_celular.style.display = 'none';
-	}
-
-	/* Validação do campo sexo */
-	caixa_sexo = document.querySelector('.msg-sexo');
-	if(sexo.value == ""){
-		caixa_sexo.innerHTML = "Favor preencher o sexo";
-		caixa_sexo.style.display = 'block';
-		contErro += 1;
-	}else{
-		caixa_sexo.style.display = 'none';
+		caixa_gender.style.display = 'none';
 	}
 
 	if(contErro > 0){

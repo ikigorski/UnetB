@@ -22,7 +22,7 @@
 		<fieldset>
 			<legend><h1>Cadastro de Cliente</h1></legend>
 			
-			<form action="#" method="post" id='form-contato' enctype='multipart/form-data'>
+			<form action="../user.php" method="post" id='form-contato' enctype='multipart/form-data'>
 				
 				<div class="row">
 					<label for="nome">Selecionar Foto</label>
@@ -35,49 +35,49 @@
 				</div>
 
 				<div class="form-group">
-					<label for="nome">Nome</label>
-					<input type="text" class="form-control" id="nome" name="nome" placeholder="Infome o Nome">
-					<span class='msg-erro msg-nome'></span>
+					<label for="name">*Nome</label>
+					<input type="text" class="form-control" id="name" name="name" placeholder="Infome o Nome">
+					<span class='msg-erro msg-name'></span>
 				</div>
 
 				<div class="form-group">
-					<label for="email">E-mail</label>
+					<label for="email">*E-mail</label>
 					<input type="email" class="form-control" id="email" name="email" placeholder="Informe o E-mail">
 					<span class='msg-erro msg-email'></span>
 				</div>
 
 				<div class="form-group">
-					<label for="matricula">Matrícula</label>
+					<label for="matricula">*Matrícula</label>
 					<input type="matricula" class="form-control" id="matricula" name="matricula" placeholder="Informe a Matrícula" maxlength = "10">
 					<span class='msg-erro msg-matricula'></span>
 				</div>
 
 				<div class="form-group">
-					<label for="senha">Senha</label>
-					<input type="password" class="form-control" id="senha" name="senha" placeholder="Infome a Senha">
-					<span class='msg-erro msg-senha'></span>
+					<label for="password">*Senha</label>
+					<input type="password" class="form-control" id="password" name="password" placeholder="Infome a Senha">
+					<span class='msg-erro msg-password'></span>
 				</div>
 
 				<div class="form-group">
-					<label for="data_nascimento">Data de Nascimento</label>
-					<input type="data_nascimento" class="form-control" id="data_nascimento" maxlength="10" name="data_nascimento" placeholder="Infome a Data de Nascimento">
-					<span class='msg-erro msg-data'></span>
+					<label for="birthday">Data de Nascimento</label>
+					<input type="birthday" class="form-control" id="birthday" maxlength="10" name="birthday" placeholder="Infome a Data de Nascimento">
+					<span class='msg-erro msg-birthday'></span>
 				</div>
 
 				<div class="form-group">
-					<label for="celular">Celular</label>
-					<input type="celular" class="form-control" id="celular" maxlength="13" name="celular" placeholder="Informe o Celular">
-					<span class='msg-erro msg-celular'></span>
+					<label for="phone">Celular</label>
+					<input type="phone" class="form-control" id="phone" maxlength="13" name="phone" placeholder="Informe o Celular">
+					<span class='msg-erro msg-phone'></span>
 				</div>
 
 				<div class="form-group">
-					<label for="sexo">Sexo</label>
-					<select class="form-control" name="sexo" id="sexo">
+					<label for="gender">*Sexo</label>
+					<select class="form-control" name="gender" id="gender">
 						<option value="">Selecione o Sexo</option>
 						<option value="feminino">Feminino</option>
 						<option value="masculino">Masculino</option>
 					</select>
-					<span class='msg-erro msg-sexo'></span>
+					<span class='msg-erro msg-gender'></span>
 				</div>
 
 				<input type="hidden" name="acao" value="incluir">
