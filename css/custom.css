@@ -4,19 +4,19 @@ html, body {
     margin: 0;
     padding: 0;
 }
+#map{
+    height: 100%; 
+}
+
 .wrapper {
     min-height: 100%;
     height: auto !important;
     height: 100%;
     margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+    margin-top: 50px;
 }
 .footer, .push {
     height: 50px; /* .push must be the same height as .footer */
-}
-
-/* CUSTOMIZAÇÃO DO HEADER */
-.navbar{ 
-	margin-bottom: 0px; 
 }
 
 /* CUSTOMIZAÇÃO DO FOOTER */
@@ -30,14 +30,9 @@ html, body {
 fieldset{
 	margin:1% auto;
 }
-
 .box-mensagem-crud{ 
 	margin-top: 10px;
 }
-
 .msg-erro{
 	color: red; 
 }
-
-
-
