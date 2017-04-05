@@ -45,6 +45,7 @@ function validaCadastro(evt){
 	var email = document.getElementById('email');
 	var matricula = document.getElementById('matricula');
 	var password = document.getElementById('password');
+	var course = document.getElementById('course');
 	var gender = document.getElementById('gender');
 	var filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 	var contErro = 0;
@@ -96,6 +97,20 @@ function validaCadastro(evt){
 		contErro += 1;
 	}else{
 		caixa_password.style.display = 'none';
+	}
+
+	/* Validação do campo course */
+	caixa_course = document.querySelector('.msg-course');
+	if(course.value == ""){
+		caixa_course.innerHTML = "Favor preencher o curso";
+		caixa_course.style.display = 'block';
+		contErro += 1;
+	}else{
+		caixa_course.style.display = 'none';
+	}
+
+	if(contErro > 0){
+		evt.preventDefault();
 	}
 
 	/* Validação do campo gender */
