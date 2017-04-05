@@ -47,7 +47,9 @@ function validaCadastro(evt){
 	var password = document.getElementById('password');
 	var course = document.getElementById('course');
 	var gender = document.getElementById('gender');
-	var filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+	var filtro_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+	var filtro_name = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']+$/;
+	var filtro_matricula = /^[0-9 /]+$/;
 	var contErro = 0;
 
 
@@ -57,6 +59,15 @@ function validaCadastro(evt){
 		caixa_name.innerHTML = "Favor preencher o Nome";
 		caixa_name.style.display = 'block';
 		contErro += 1;
+	}else if(name.value.length < 3){
+		caixa_name.innerHTML = "O nome deve conter no mínimo 3 letras";
+		caixa_name.style.display = 'block';
+		contErro += 1;
+	}else if(!filtro_name.test(name.value)){
+		caixa_name.innerHTML = "O nome deve conter apenas letras";
+		caixa_name.style.display = 'block';
+		contErro += 1;
+
 	}else{
 		caixa_name.style.display = 'none';
 	}
@@ -67,18 +78,26 @@ function validaCadastro(evt){
 		caixa_email.innerHTML = "Favor preencher o E-mail";
 		caixa_email.style.display = 'block';
 		contErro += 1;
-	}else if(filtro.test(email.value)){
-		caixa_email.style.display = 'none';
-	}else{
-		caixa_email.innerHTML = "Formato do E-mail inválido";
+	}else if(!filtro_email.test(email.value)){
+		caixa_email.innerHTML = "E-mail no formato inválido";
 		caixa_email.style.display = 'block';
 		contErro += 1;
+	}else{
+		caixa_email.style.display = 'none';
 	}
 
 	/* Validação do campo Matrícula*/
 	caixa_matricula = document.querySelector('.msg-matricula');
 	if(matricula.value == ""){
 		caixa_matricula.innerHTML = "Favor preencher a Matrícula";
+		caixa_matricula.style.display = 'block';
+		contErro += 1;
+	}else if(matricula.value.length != 10){
+		caixa_matricula.innerHTML = "Favor preencher a Matrícula por completo";
+		caixa_matricula.style.display = 'block';
+		contErro += 1;
+	}else if(!filtro_matricula.test(matricula.value)){
+		caixa_matricula.innerHTML = "Favor preencher a Matrícula usando apenas números";
 		caixa_matricula.style.display = 'block';
 		contErro += 1;
 	}else{

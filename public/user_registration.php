@@ -138,6 +138,7 @@
 				<div class="form-group">
 					<label for="gender">*Sexo</label>
 					<select class="form-control" name="gender" id="gender">
+						<option value="">Selecione o Sexo</option>
 						<option value="feminino">Feminino</option>
 						<option value="masculino">Masculino</option>
 					</select>
@@ -146,7 +147,7 @@
 
 				<div class="form-group">
 					<label for="birthday">Data de Nascimento</label>
-					<input type="birthday" class="form-control" id="birthday" maxlength="10" name="birthday" placeholder="Infome a Data de Nascimento">
+					<input type="date" class="form-control" id="birthday" name="birthday">
 					<span class='msg-erro msg-birthday'></span>
 				</div>
 
