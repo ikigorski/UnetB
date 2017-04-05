@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" style="height: 100%;">
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8">
@@ -138,7 +138,6 @@
 				<div class="form-group">
 					<label for="gender">*Sexo</label>
 					<select class="form-control" name="gender" id="gender">
-						<option value="">Selecione o Sexo</option>
 						<option value="feminino">Feminino</option>
 						<option value="masculino">Masculino</option>
 					</select>
