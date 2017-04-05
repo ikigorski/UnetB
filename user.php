@@ -106,7 +106,7 @@ class User {
 		mysql_select_db("UnetB",$con);
                 	  
 
-		mysql_query("INSERT INTO UnetB (name, email, matricula, password, curso, birthday, phone, gender) VALUES (this->$name, this->$email, this->$matricula, this->$password, this->$curso, this->$birthday, this->$phone, this->$gender) ");
+		mysql_query("INSERT INTO UnetB (name, email, matricula, password, curso, birthday, phone, gender) VALUES ($this->$name, $this->$email, $this->$matricula, $this->$password, $this->$curso, $this->$birthday, $this->$phone, $this->$gender) ");
 
 		mysql_close($con);
 
