@@ -5,7 +5,7 @@ class User {
 	private $email;
 	private $matricula;
 	private $password;
-	private $cpf;
+	private $curso;
 	private $birthday;
 	private $phone;
 	private $gender;
@@ -14,7 +14,7 @@ class User {
 	$email = $_POST['email'];
 	$matricula = $_POST['matricula'];
 	$password = $_POST['password'];
-	$cpf = $_POST['cpf'];
+	$curso = $_POST['curso'];
 	$birthday = $_POST['birthday'];
 	$phone = $_POST['phone'];
 	$gender = $_POST['gender'];
@@ -36,8 +36,8 @@ class User {
 	$this -> password = $password;
 	}
 
-	public function set_cpf ($cpf){
-	$this -> cpf = $cpf;
+	public function set_curso ($curso){
+	$this -> curso = $curso;
 	}
 	
 	public function set_birthday ($birthday){
@@ -68,13 +68,29 @@ class User {
 	public function get_password (){
 	return $this -> password;
 	}
+
+	public function get_curso (){
+	return $this -> curso;
+	}
+
+	public function get_birthday (){
+	return $this -> birthday;
+	}
+
+	public function get_phone (){
+	return $this -> phone;
+	}
+
+	public function get_gender (){
+	return $this -> gender;
+	}
  
-	public function __constructor ($name, $matricula, $email, $password){
+	public function __constructor ($name, $email, $matricula, $password, $curso, $birthday, $phone, $gender){
 	$this -> name = $name;
 	$this -> email = $email;
 	$this -> matricula = $matricula;
 	$this -> password = $password;
-	$this -> cpf = $cpf;
+	$this -> curso = $curso;
 	$this -> birthday = $birthday;
 	$this -> phone = $phone;
 	$this -> gender = $gender;
@@ -86,13 +102,11 @@ class User {
 		$con = mysql_connect("localhost", "usuario", "0000") or 
 			die('Nao foi possivel');
 
-
-		
-
+			
 		mysql_select_db("UnetB",$con);
                 	  
 
-		mysql_query("INSERT INTO UnetB (name, email, matricula, password, cpf, birthday, phone, gender) VALUES (this->$name, this->$email, this->$matricula, this->$password, this->$cpf, this->$birthday, this->$phone, this->$gender) ");
+		mysql_query("INSERT INTO UnetB (name, email, matricula, password, curso, birthday, phone, gender) VALUES (this->$name, this->$email, this->$matricula, this->$password, this->$curso, this->$birthday, this->$phone, this->$gender) ");
 
 		mysql_close($con);
 
