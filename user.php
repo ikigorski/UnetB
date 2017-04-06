@@ -1,43 +1,37 @@
 <?php
 
+
 class User {
+	
 	private $name;
 	private $email;
 	private $matricula;
 	private $password;
-	private $curso;
+	private $course;
 	private $birthday;
 	private $phone;
 	private $gender;
-	//posts deveriam ficar em outro arquivo?
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-	$matricula = $_POST['matricula'];
-	$password = $_POST['password'];
-	$curso = $_POST['curso'];
-	$birthday = $_POST['birthday'];
-	$phone = $_POST['phone'];
-	$gender = $_POST['gender'];
+	
 	
 	
 	public function set_name ($name){
-	$this -> name = $name;
+		$this -> name = $name;
 	}
 
 	public function set_email ($email){
-	$this -> email = $email;
+		$this -> email = $email;
 	}
 
 	public function set_matricula ($matricula){
-	$this -> matricula = $matricula;
+		$this -> matricula = $matricula;
 	}
 
 	public function set_password ($password){
-	$this -> password = $password;
+		$this -> password = $password;
 	}
 
-	public function set_curso ($curso){
-	$this -> curso = $curso;
+	public function set_course ($course){
+		$this -> course = $course;
 	}
 	
 	public function set_birthday ($birthday){
@@ -69,8 +63,8 @@ class User {
 	return $this -> password;
 	}
 
-	public function get_curso (){
-	return $this -> curso;
+	public function get_course (){
+	return $this -> course;
 	}
 
 	public function get_birthday (){
@@ -85,33 +79,50 @@ class User {
 	return $this -> gender;
 	}
  
-	public function __constructor ($name, $email, $matricula, $password, $curso, $birthday, $phone, $gender){
-	$this -> name = $name;
-	$this -> email = $email;
-	$this -> matricula = $matricula;
-	$this -> password = $password;
-	$this -> curso = $curso;
-	$this -> birthday = $birthday;
-	$this -> phone = $phone;
-	$this -> gender = $gender;
+	public function __construct ($name, $email, $matricula, $password, $course, $birthday, $phone, $gender){
+	$this->name = $name;
+	$this->email = $email;
+	$this->matricula = $matricula;
+	$this->password = $password;
+	$this->course = $course;
+	$this->birthday = $birthday;
+	$this->phone = $phone;
+	$this->gender = $gender;
 	}
 	
 	public function save()
 	{
                 
-		$con = mysql_connect("localhost", "usuario", "0000") or 
-			die('Nao foi possivel');
+		$con = mysqli_connect("localhost", "root", "123456"	);
 
 			
-		mysql_select_db("UnetB",$con);
+		mysql_select_db("unetb",$con);
                 	  
 
-		mysql_query("INSERT INTO UnetB (name, email, matricula, password, curso, birthday, phone, gender) VALUES ($this->$name, $this->$email, $this->$matricula, $this->$password, $this->$curso, $this->$birthday, $this->$phone, $this->$gender) ");
+		mysql_query("INSERT INTO unetb (name, email, matricula, password, course, birthday, phone, gender) VALUES ($this->$name, $this->$email, $this->$matricula, $this->$password, $this->$course, $this->$birthday, $this->$phone, $this->$gender) ");
 
 		mysql_close($con);
 
 	}
 
 }
+
+  $obj = new User($_POST['name'], $_POST['email'], $_POST['matricula'], $_POST['password'], $_POST['course'], $_POST['birthday'], $_POST['phone'] ,$_POST['gender']);
+
+
+  	//var_dump($_POST['name']);
+  	//$obj->set_name($_POST['name']);
+  	var_dump($obj);
+
+  	$obj->save();
+	
+	/*$name = $_POST['name'];
+	$email = $_POST['email'];
+	$matricula = $_POST['matricula'];
+	$password = $_POST['password'];
+	$course = $_POST['course'];
+	$birthday = $_POST['birthday'];
+	$phone = $_POST['phone'];
+	$gender = $_POST['gender']; */
 
 ?>

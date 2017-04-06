@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" style="height: 100%;">
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8">
@@ -59,15 +59,80 @@
 				</div>
 
 				<div class="form-group">
-					<label for="birthday">Data de Nascimento</label>
-					<input type="birthday" class="form-control" id="birthday" maxlength="10" name="birthday" placeholder="Infome a Data de Nascimento">
-					<span class='msg-erro msg-birthday'></span>
-				</div>
-
-				<div class="form-group">
-					<label for="phone">Celular</label>
-					<input type="phone" class="form-control" id="phone" maxlength="13" name="phone" placeholder="Informe o Celular">
-					<span class='msg-erro msg-phone'></span>
+					<label for="course">*Curso</label>
+					<select class="form-control" name="course" id="course">
+						<option value="">Selecione o Seu Curso</option>
+						<option value="ADMINISTRAÇÃO">ADMINISTRAÇÃO</option>
+						<option value="AGRONOMIA">AGRONOMIA</option>
+						<option value="ARQUITETURA E URBANISMO">ARQUITETURA E URBANISMO</option>
+						<option value="ARQUIVOLOGIA">ARQUIVOLOGIA</option>
+						<option value="ARTES CÊNICAS">ARTES CÊNICAS</option>
+						<option value="ARTES VISUAIS">ARTES VISUAIS</option>
+						<option value="BIBLIOTECONOMIA">BIBLIOTECONOMIA</option>
+						<option value="BIOTECNOLONIA">BIOTECNOLONIA</option>
+						<option value="CIÊNCIA DA COMPUTAÇÃO">CIÊNCIA DA COMPUTAÇÃO</option>
+						<option value="">CIÊNCIA POLÍTICA</option>
+						<option value="">CIÊNCIAS AMBIENTAIS</option>
+						<option value="">CIÊNCIAS CONTÁBEIS</option>
+						<option value="">CIÊNCIAS ECONÔMICAS</option>
+						<option value="">CIÊNCIAS NATURAIS</option>
+						<option value="">CIÊNCIAS SOCIAIS</option>
+						<option value="">COMPUTAÇÃO</option>
+						<option value="">COMUNICAÇÃO SOCIAL</option>
+						<option value="">DESIGN</option>
+						<option value="">DIREITO</option>
+						<option value="">EDUCAÇÃO ARTÍSTICA</option>
+						<option value="">EDUCAÇÃO DO CAMPO</option>
+						<option value="">EDUCAÇÃO FÍSICA</option>
+						<option value="">ENFERMAGEM</option>
+						<option value="">ENGENHARIA AMBIENTAL</option>
+						<option value="">ENGENHARIA CIVIL</option>
+						<option value="">ENGENHARIA DE COMPUTAÇÃO</option>
+						<option value="">ENGENHARIA DE PRODUÇÃO</option>
+						<option value="">ENGENHARIA DE REDES DE COMUNICAÇÃO</option>
+						<option value="">ENGENHARIA ELÉTRICA</option>
+						<option value="">ENGENHARIA FLORESTAL</option>
+						<option value="">ENGENHARIA MECÂNICA</option>
+						<option value="">ENGENHARIA MECATRÔNICA</option>
+						<option value="">ENGENHARIA QUÍMICA</option>
+						<option value="">ESTATÍSTICA</option>
+						<option value="">FARMÁCIA</option>
+						<option value="">FILOSOFIA</option>
+						<option value="">FÍSICA</option>
+						<option value="">GEOFÍSICA</option>
+						<option value="">GEOGRAFIA</option>
+						<option value="">GEOLOGIA</option>
+						<option value="">GESTÃO AMBIENTAL</option>
+						<option value="">GESTÃO DE AGRONEGÓCIOS</option>
+						<option value="">GESTÃO DE POLÍTICAS PÚBLICAS</option>
+						<option value="">HISTÓRIA</option>
+						<option value="">JORNALISMO</option>
+						<option value="">LETRAS</option>
+						<option value="">LETRAS - TRADUÇÃO</option>
+						<option value="">LETRAS - TRADUÇÃO ESPANHOL</option>
+						<option value="">LIBRAS</option>
+						<option value="">LINGUA ESTRANGEIRA APLICADA</option>
+						<option value="">MATEMÁTICA</option>
+						<option value="">MATEMÁTICA - SEGUNDA LICENCIATURA</option>
+						<option value="">MEDICINA</option>
+						<option value="">MEDICINA VETERINÁRIA</option>
+						<option value="">MUSEOLOGIA</option>
+						<option value="">MÚSICA</option>
+						<option value="">NUTRIÇÃO</option>
+						<option value="">ODONTOLOGIA</option>
+						<option value="">PEDAGOGIA</option>
+						<option value="">PEDAGOGIA - 1ª LICENCIATURA</option>
+						<option value="">PSICOLOGIA</option>
+						<option value="">QUÍMICA</option>
+						<option value="">QUÍMICA TECNOLÓGICA</option>
+						<option value="">RELAÇÕES INTERNACIONAIS</option>
+						<option value="">SAÚDE COLETIVA</option>
+						<option value="">SERVIÇO SOCIAL</option>
+						<option value="">TEATRO</option>
+						<option value="">TEORIA CRÍTICA E HISTÓRIA DA ARTE</option>
+						<option value="">TURISMO</option>	
+					</select>
+					<span class='msg-erro msg-course'></span>
 				</div>
 
 				<div class="form-group">
@@ -78,6 +143,18 @@
 						<option value="masculino">Masculino</option>
 					</select>
 					<span class='msg-erro msg-gender'></span>
+				</div>
+
+				<div class="form-group">
+					<label for="birthday">Data de Nascimento</label>
+					<input type="date" class="form-control" id="birthday" name="birthday">
+					<span class='msg-erro msg-birthday'></span>
+				</div>
+
+				<div class="form-group">
+					<label for="phone">Celular</label>
+					<input type="phone" class="form-control" id="phone" maxlength="13" name="phone" placeholder="Informe o Celular">
+					<span class='msg-erro msg-phone'></span>
 				</div>
 
 				<input type="hidden" name="acao" value="incluir">
