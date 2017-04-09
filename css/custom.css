@@ -5,7 +5,7 @@ html, body {
     padding: 0;
 }
 #map{
-    height: 100%; 
+    height: 100%;
 }
 
 .wrapper {
@@ -22,7 +22,7 @@ html, body {
 /* CUSTOMIZAÇÃO DO FOOTER */
 .panel{
 	margin-bottom: 0px;
-    text-align: center;	
+    text-align: center;
 }
 
 /* CUSTOMIZAÇÃO DO CADASTRO */
@@ -30,9 +30,24 @@ html, body {
 fieldset{
 	margin:1% auto;
 }
-.box-mensagem-crud{ 
+.box-mensagem-crud{
 	margin-top: 10px;
 }
 .msg-erro{
-	color: red; 
+	color: red;
+}
+
+.center-panel{
+  width: 500px;
+  height: 390px;
+  margin: 70px auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+.bg-color-blue{
+  background-color: #1212B8;
+}
+
+.ls-login-logo{
+  color: #1212B8;
 }
