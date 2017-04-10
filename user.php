@@ -93,15 +93,12 @@ class User {
 	public function save()
 	{
                 
-		$con = mysqli_connect("localhost", "root", "123456"	);
-
-			
-		mysql_select_db("unetb",$con);
+		$con = mysqli_connect("127.0.0.1", "root", "", "unetb");
                 	  
 
-		mysql_query("INSERT INTO unetb (name, email, matricula, password, course, birthday, phone, gender) VALUES ($this->$name, $this->$email, $this->$matricula, $this->$password, $this->$course, $this->$birthday, $this->$phone, $this->$gender) ");
+		mysqli_query("INSERT INTO unetb (name, email, matricula, password, course, birthday, phone, gender) VALUES ($thi/s->$name, $this->$email, $this->$matricula, $this->$password, $this->$course, $this->$birthday, $this->$phone, $this->$gender) ");
 
-		mysql_close($con);
+		mysqli_close($con);
 
 	}
 
@@ -114,7 +111,6 @@ class User {
   	//$obj->set_name($_POST['name']);
   	var_dump($obj);
 
-  	$obj->save();
 	
 	/*$name = $_POST['name'];
 	$email = $_POST['email'];
