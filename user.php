@@ -96,7 +96,7 @@ class User {
 		$con = mysqli_connect("127.0.0.1", "root", "", "unetb");
                 	  
 
-		mysqli_query("INSERT INTO unetb (name, email, matricula, password, course, birthday, phone, gender) VALUES ($thi/s->$name, $this->$email, $this->$matricula, $this->$password, $this->$course, $this->$birthday, $this->$phone, $this->$gender) ");
+		mysqli_query("INSERT INTO unetb (name, email, matricula, password, course, birthday, phone, gender) VALUES ($this->$name, $this->$email, $this->$matricula, $this->$password, $this->$course, $this->$birthday, $this->$phone, $this->$gender) ");
 
 		mysqli_close($con);
 
@@ -109,7 +109,9 @@ class User {
 
   	//var_dump($_POST['name']);
   	//$obj->set_name($_POST['name']);
+
   	var_dump($obj);
+  	$obj->save();
 
 	
 	/*$name = $_POST['name'];

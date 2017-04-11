@@ -139,8 +139,8 @@
 					<label for="gender">*Sexo</label>
 					<select class="form-control" name="gender" id="gender">
 						<option value="">Selecione o Sexo</option>
-						<option value="feminino">Feminino</option>
-						<option value="masculino">Masculino</option>
+						<option value="F">Feminino</option>
+						<option value="M">Masculino</option>
 					</select>
 					<span class='msg-erro msg-gender'></span>
 				</div>
