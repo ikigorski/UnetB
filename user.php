@@ -1,6 +1,5 @@
 <?php
 
-
 class User {
 	
 	private $name;
@@ -78,7 +77,7 @@ class User {
 	public function get_gender (){
 	return $this -> gender;
 	}
- 
+
 	public function __construct ($name, $email, $matricula, $password, $course, $birthday, $phone, $gender){
 	$this->name = $name;
 	$this->email = $email;
@@ -92,11 +91,12 @@ class User {
 	
 	public function save()
 	{
-                
-		$con = mysqli_connect("127.0.0.1", "root", "", "unetb");
-                	  
 
-		mysqli_query("INSERT INTO unetb (name, email, matricula, password, course, birthday, phone, gender) VALUES ($this->$name, $this->$email, $this->$matricula, $this->$password, $this->$course, $this->$birthday, $this->$phone, $this->$gender) ");
+		$con = mysqli_connect("127.0.0.1", "root", "", "unetb");
+
+		mysqli_query($con,"INSERT INTO alunos (name, email, matricula, password, course, birthday, phone, gender) 
+								VALUES ('teste','te1ste','matricula1','t1este','t1este','te1ste','te1ste','te1ste')
+					");	
 
 		mysqli_close($con);
 
@@ -106,21 +106,7 @@ class User {
 
   $obj = new User($_POST['name'], $_POST['email'], $_POST['matricula'], $_POST['password'], $_POST['course'], $_POST['birthday'], $_POST['phone'] ,$_POST['gender']);
 
-
-  	//var_dump($_POST['name']);
-  	//$obj->set_name($_POST['name']);
-
   	var_dump($obj);
   	$obj->save();
-
-	
-	/*$name = $_POST['name'];
-	$email = $_POST['email'];
-	$matricula = $_POST['matricula'];
-	$password = $_POST['password'];
-	$course = $_POST['course'];
-	$birthday = $_POST['birthday'];
-	$phone = $_POST['phone'];
-	$gender = $_POST['gender']; */
 
 ?>
