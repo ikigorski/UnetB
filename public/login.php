@@ -29,12 +29,12 @@
 						<fieldset>
 
 							<div class="form-group ls-login-user">
-								<label for="userLogin">E-mail</label>
+								<label for="email">E-mail</label>
 								<input class="form-control ls-login-bg-user input-lg" id="userLogin" aria-label="E-mail" placeholder="E-mail" type="text">
 							</div>
 
 							<div class="form-group ls-login-password">
-								<label for="userPassword">Senha</label>
+								<label for="password">Senha</label>
 								<input class="form-control ls-login-bg-password input-lg" id="userPassword" aria-label="Senha" placeholder="Senha" type="password">
 							</div>
 
@@ -57,6 +57,7 @@
 		</div>
 
 	</body>
+	<script type="js/login.js"></script>
 	<script type="js/jquery.min.js"></script>
 	<script type="js/bootstrap.min.js"></script>
 </html>

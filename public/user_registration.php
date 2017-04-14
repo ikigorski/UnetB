@@ -21,9 +21,9 @@
 	<div class='container'>
 		<fieldset>
 			<legend><h1>Cadastro de Cliente</h1></legend>
-			
+
 			<form action="../user.php" method="post" id='form-contato' enctype='multipart/form-data'>
-				
+
 				<div class="row">
 					<label for="nome">Selecionar Foto</label>
 					<div class="col-md-2">
@@ -62,75 +62,73 @@
 					<label for="course">*Curso</label>
 					<select class="form-control" name="course" id="course">
 						<option value="">Selecione o Seu Curso</option>
-						<option value="ADMINISTRAÇÃO">ADMINISTRAÇÃO</option>
-						<option value="AGRONOMIA">AGRONOMIA</option>
-						<option value="ARQUITETURA E URBANISMO">ARQUITETURA E URBANISMO</option>
-						<option value="ARQUIVOLOGIA">ARQUIVOLOGIA</option>
-						<option value="ARTES CÊNICAS">ARTES CÊNICAS</option>
-						<option value="ARTES VISUAIS">ARTES VISUAIS</option>
-						<option value="BIBLIOTECONOMIA">BIBLIOTECONOMIA</option>
-						<option value="BIOTECNOLONIA">BIOTECNOLONIA</option>
-						<option value="CIÊNCIA DA COMPUTAÇÃO">CIÊNCIA DA COMPUTAÇÃO</option>
-						<option value="">CIÊNCIA POLÍTICA</option>
-						<option value="">CIÊNCIAS AMBIENTAIS</option>
-						<option value="">CIÊNCIAS CONTÁBEIS</option>
-						<option value="">CIÊNCIAS ECONÔMICAS</option>
-						<option value="">CIÊNCIAS NATURAIS</option>
-						<option value="">CIÊNCIAS SOCIAIS</option>
-						<option value="">COMPUTAÇÃO</option>
-						<option value="">COMUNICAÇÃO SOCIAL</option>
-						<option value="">DESIGN</option>
-						<option value="">DIREITO</option>
-						<option value="">EDUCAÇÃO ARTÍSTICA</option>
-						<option value="">EDUCAÇÃO DO CAMPO</option>
-						<option value="">EDUCAÇÃO FÍSICA</option>
-						<option value="">ENFERMAGEM</option>
-						<option value="">ENGENHARIA AMBIENTAL</option>
-						<option value="">ENGENHARIA CIVIL</option>
-						<option value="">ENGENHARIA DE COMPUTAÇÃO</option>
-						<option value="">ENGENHARIA DE PRODUÇÃO</option>
-						<option value="">ENGENHARIA DE REDES DE COMUNICAÇÃO</option>
-						<option value="">ENGENHARIA ELÉTRICA</option>
-						<option value="">ENGENHARIA FLORESTAL</option>
-						<option value="">ENGENHARIA MECÂNICA</option>
-						<option value="">ENGENHARIA MECATRÔNICA</option>
-						<option value="">ENGENHARIA QUÍMICA</option>
-						<option value="">ESTATÍSTICA</option>
-						<option value="">FARMÁCIA</option>
-						<option value="">FILOSOFIA</option>
-						<option value="">FÍSICA</option>
-						<option value="">GEOFÍSICA</option>
-						<option value="">GEOGRAFIA</option>
-						<option value="">GEOLOGIA</option>
-						<option value="">GESTÃO AMBIENTAL</option>
-						<option value="">GESTÃO DE AGRONEGÓCIOS</option>
-						<option value="">GESTÃO DE POLÍTICAS PÚBLICAS</option>
-						<option value="">HISTÓRIA</option>
-						<option value="">JORNALISMO</option>
-						<option value="">LETRAS</option>
-						<option value="">LETRAS - TRADUÇÃO</option>
-						<option value="">LETRAS - TRADUÇÃO ESPANHOL</option>
-						<option value="">LIBRAS</option>
-						<option value="">LINGUA ESTRANGEIRA APLICADA</option>
-						<option value="">MATEMÁTICA</option>
-						<option value="">MATEMÁTICA - SEGUNDA LICENCIATURA</option>
-						<option value="">MEDICINA</option>
-						<option value="">MEDICINA VETERINÁRIA</option>
-						<option value="">MUSEOLOGIA</option>
-						<option value="">MÚSICA</option>
-						<option value="">NUTRIÇÃO</option>
-						<option value="">ODONTOLOGIA</option>
-						<option value="">PEDAGOGIA</option>
-						<option value="">PEDAGOGIA - 1ª LICENCIATURA</option>
-						<option value="">PSICOLOGIA</option>
-						<option value="">QUÍMICA</option>
-						<option value="">QUÍMICA TECNOLÓGICA</option>
-						<option value="">RELAÇÕES INTERNACIONAIS</option>
-						<option value="">SAÚDE COLETIVA</option>
-						<option value="">SERVIÇO SOCIAL</option>
-						<option value="">TEATRO</option>
-						<option value="">TEORIA CRÍTICA E HISTÓRIA DA ARTE</option>
-						<option value="">TURISMO</option>	
+						<option value="administração">ADMINISTRAÇÃO</option>
+						<option value="agronomia">AGRONOMIA</option>
+						<option value="arquitetura">ARQUITETURA E URBANISMO</option>
+						<option value="arquivologia">ARQUIVOLOGIA</option>
+						<option value="cenicas">ARTES CÊNICAS</option>
+						<option value="visuais">ARTES VISUAIS</option>
+						<option value="biblioteconomia">BIBLIOTECONOMIA</option>
+						<option value="biotecnologia">BIOTECNOLONIA</option>
+						<option value="cienciacomputacao">CIÊNCIA DA COMPUTAÇÃO</option>
+						<option value="cienciapolitica">CIÊNCIA POLÍTICA</option>
+						<option value="cienciasambientais">CIÊNCIAS AMBIENTAIS</option>
+						<option value="cienciascontabeis">CIÊNCIAS CONTÁBEIS</option>
+						<option value="cienciaseconomicas">CIÊNCIAS ECONÔMICAS</option>
+						<option value="cienciasnaturais">CIÊNCIAS NATURAIS</option>
+						<option value="cienciassociais">CIÊNCIAS SOCIAIS</option>
+						<option value="computacao">COMPUTAÇÃO</option>
+						<option value="comunicacaosocial">COMUNICAÇÃO SOCIAL</option>
+						<option value="design">DESIGN</option>
+						<option value="direito">DIREITO</option>
+						<option value="educacaoartistica">EDUCAÇÃO ARTÍSTICA</option>
+						<option value="educacaodocampo">EDUCAÇÃO DO CAMPO</option>
+						<option value="educacaofisica">EDUCAÇÃO FÍSICA</option>
+						<option value="enfermagem">ENFERMAGEM</option>
+						<option value="engenhariaambiental">ENGENHARIA AMBIENTAL</option>
+						<option value="engenhariacivil">ENGENHARIA CIVIL</option>
+						<option value="engenhariadecomputacao">ENGENHARIA DE COMPUTAÇÃO</option>
+						<option value="engenhariadeproducao">ENGENHARIA DE PRODUÇÃO</option>
+						<option value="engenhariaderedes">ENGENHARIA DE REDES DE COMUNICAÇÃO</option>
+						<option value="engenhariaeletrica">ENGENHARIA ELÉTRICA</option>
+						<option value="engenhariaflorestal">ENGENHARIA FLORESTAL</option>
+						<option value="engenhariamecanica">ENGENHARIA MECÂNICA</option>
+						<option value="engenhariamecatronica">ENGENHARIA MECATRÔNICA</option>
+						<option value="engenhariaquimica">ENGENHARIA QUÍMICA</option>
+						<option value="estatistica">ESTATÍSTICA</option>
+						<option value="farmacia">FARMÁCIA</option>
+						<option value="filosofia">FILOSOFIA</option>
+						<option value="fisica">FÍSICA</option>
+						<option value="geofisica">GEOFÍSICA</option>
+						<option value="geografia">GEOGRAFIA</option>
+						<option value="geologia">GEOLOGIA</option>
+						<option value="gestaoambiental">GESTÃO AMBIENTAL</option>
+						<option value="gestaodeagronegocios">GESTÃO DE AGRONEGÓCIOS</option>
+						<option value="gestaodepoliticas">GESTÃO DE POLÍTICAS PÚBLICAS</option>
+						<option value="historia">HISTÓRIA</option>
+						<option value="jornalismo">JORNALISMO</option>
+						<option value="lestras">LETRAS</option>
+						<option value="traducao">LETRAS - TRADUÇÃO</option>
+						<option value="espanhol">LETRAS - TRADUÇÃO ESPANHOL</option>
+						<option value="libras">LIBRAS</option>
+						<option value="entrangeiraaplicada">LINGUA ESTRANGEIRA APLICADA</option>
+						<option value="matematica">MATEMÁTICA</option>
+						<option value="medicina">MEDICINA</option>
+						<option value="medicinaveterinaria">MEDICINA VETERINÁRIA</option>
+						<option value="museologia">MUSEOLOGIA</option>
+						<option value="musica">MÚSICA</option>
+						<option value="nutricao">NUTRIÇÃO</option>
+						<option value="odontologia">ODONTOLOGIA</option>
+						<option value="pedagogia">PEDAGOGIA</option>
+						<option value="psicologia">PSICOLOGIA</option>
+						<option value="quimica">QUÍMICA</option>
+						<option value="quimicatecnologica">QUÍMICA TECNOLÓGICA</option>
+						<option value="relacoesinternacionais">RELAÇÕES INTERNACIONAIS</option>
+						<option value="saudecoletiva">SAÚDE COLETIVA</option>
+						<option value="servicosocial">SERVIÇO SOCIAL</option>
+						<option value="teatro">TEATRO</option>
+						<option value="historiadaarte">TEORIA CRÍTICA E HISTÓRIA DA ARTE</option>
+						<option value="turismo">TURISMO</option>
 					</select>
 					<span class='msg-erro msg-course'></span>
 				</div>
@@ -162,7 +160,7 @@
 			</form>
 		</fieldset>
 	</div>
-	
+
 	<div class="push"></div>
 	</div>
 
@@ -174,9 +172,9 @@
 		?>
 	</div>
 
-	
+
 </body>
-	<script type="text/javascript" src="../js/valida_cadastro.js"></script>	
+	<script type="text/javascript" src="../js/valida_cadastro.js"></script>
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </html>
