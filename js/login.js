@@ -1,20 +1,17 @@
-var attempt = 3; // número máximo de tentativas.
-// Below function Executes on click of login button.
 function validate(){
-var username = document.getElementById("email").value;
-var password = document.getElementById("password").value;
-if ( userEmail == "email" && userPassword == "password"{ alert ("E-mail ou senha incorretos."); // implementar funções, em .php que busca email e senha no database;
-window.location = "welcome.php"; // página inicial do usuário apos login;
+var Email = document.getElementById('userEmail').value;
+var Password = document.getElementById('userPassword').value;
+if (Email == "teste@email.com" && Password == "teste"){ alert ("Bem vindo(a)"); // implementar funções, em .php que busca email e senha no database;
+window.location = "/welcome.php"; // página inicial do usuário apos login;
 return false;
 }
 else{
-attempt --;// Menos 1 tentativa;
-alert("You have left "+attempt+" attempt;");
+alert("Senha ou E-mail incorretos");
 // Ao atingir o número máximo de tentativas a função é desabilitada.
-if( attempt == 0){
-document.getElementById("email").disabled = true;
-document.getElementById("passsword").disabled = true;
-document.getElementById("submit").disabled = true;
-return false;
+//if( attempt == 0){
+//document.getElementById("userEmail").disabled = true;
+//document.getElementById("userPassword").disabled = true;
+//document.getElementById("submit").disabled = true;
+//return false;
 }
 }

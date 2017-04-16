@@ -25,7 +25,7 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">USUÁRIO<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="../public/login.php">Entrar</a></li>
+						<li><a href="./public/loginInterface.php">Entrar</a></li>
 						<li><a href="#">Perfil</a></li>
 						<li><a href="#">Something else here</a></li>
 						<li role="separator" class="divider"></li>

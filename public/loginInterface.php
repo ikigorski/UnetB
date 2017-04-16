@@ -29,18 +29,16 @@
 						<fieldset>
 
 							<div class="form-group ls-login-user">
-								<label for="email">E-mail</label>
-								<input class="form-control ls-login-bg-user input-lg" id="userLogin" aria-label="E-mail" placeholder="E-mail" type="text">
+								<label for="userEmail">E-mail</label>
+								<input class="form-control ls-login-bg-user input-lg" id="userEmail" aria-label="E-mail" placeholder="E-mail" type="text">
 							</div>
 
 							<div class="form-group ls-login-password">
-								<label for="password">Senha</label>
+								<label for="userPassword">Senha</label>
 								<input class="form-control ls-login-bg-password input-lg" id="userPassword" aria-label="Senha" placeholder="Senha" type="password">
 							</div>
 
-							<a href="#" class="ls-login-forgot">Esqueci minha senha</a>
-
-							<input value="Entrar" class="btn btn-primary btn-lg btn-block bg-color-blue" type="submit">
+							<input value="Entrar" onclick="validate()" class="btn btn-primary btn-lg btn-block bg-color-blue" type="submit">
 							<p class="txt-center ls-login-signup">Não possui conta no UnetB?<a href="user_registration.php">Cadastre-se agora</a></p>
 
 						</fieldset>
@@ -57,7 +55,7 @@
 		</div>
 
 	</body>
-	<script type="js/login.js"></script>
-	<script type="js/jquery.min.js"></script>
-	<script type="js/bootstrap.min.js"></script>
+	<script src= "../js/login.js"></script>
+	<script type="../js/jquery.min.js"></script>
+	<script type="../js/bootstrap.min.js"></script>
 </html>
