@@ -95,7 +95,7 @@ class User {
 		$con = mysqli_connect("127.0.0.1", "root", "", "unetb");
 
 		mysqli_query($con,"INSERT INTO alunos (name, email, matricula, password, course, birthday, phone, gender) 
-								VALUES ('teste','te1ste','matricula1','t1este','t1este','te1ste','te1ste','te1ste')
+								VALUES ('{$this->name}','{$this->email}','{$this->matricula}','{$this->password}','{$this->course}','{$this->birthday}','{$this->phone}','{$this->gender}')
 					");	
 
 		mysqli_close($con);
