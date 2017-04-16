@@ -1,9 +1,11 @@
 function validate(){
 var Email = document.getElementById('userEmail').value;
 var Password = document.getElementById('userPassword').value;
-if (Email == "teste@email.com" && Password == "teste"){ alert ("Bem vindo(a)"); // implementar funções, em .php que busca email e senha no database;
-window.location = "/welcome.php"; // página inicial do usuário apos login;
-return false;
+if (Email == "teste@email.com" && Password == "teste"){
+  window.location = "../public/netinfo.php";
+  //alert ("Bem vindo(a)"); // implementar funções, em .php que busca email e senha no database;
+ // página inicial do usuário apos login;
+//  return false;
 }
 else{
 alert("Senha ou E-mail incorretos");

@@ -1,6 +1,6 @@
 <?php
 $kb=512;
-echo "streaming $kb Kb...<!-";
+echo "Transmitindo $kb Kb...<!-";
 flush();
 $time = explode(" ",microtime());
 $start = $time[0] + $time[1];
@@ -11,5 +11,5 @@ for($x=0;$x<$kb;$x++){
 $time = explode(" ",microtime());
 $finish = $time[0] + $time[1];
 $deltat = $finish - $start;
-echo "-> Test finished in $deltat seconds. Your speed is ". round($kb / $deltat, 3)."Kb/s";
+echo "-> Tempo: $deltat segundos <p> Velocidade:". round($kb / $deltat, 3)."Kb/s";
 ?>

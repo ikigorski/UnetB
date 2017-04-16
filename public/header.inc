@@ -27,7 +27,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="./public/loginInterface.php">Entrar</a></li>
 						<li><a href="#">Perfil</a></li>
-						<li><a href="#">Something else here</a></li>
+						<li><a href="./public/netinfo.php">Teste de velocidade</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="#">Separated link</a></li>
 					</ul>
