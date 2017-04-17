@@ -48,7 +48,7 @@ function validaCadastro(evt){
 	var course = document.getElementById('course');
 	var gender = document.getElementById('gender');
 	var filtro_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-	var filtro_name = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']+$/;
+	var filtro_name = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ' ]+$/;
 	var filtro_matricula = /^[0-9 /]+$/;
 	var contErro = 0;
 

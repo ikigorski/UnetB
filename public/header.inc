@@ -11,7 +11,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="#">UNetB</a>
-			<img src="opt/lampp/htdocs/UnetB/images/logo.png"/>
+			<img src="location:UnetB/images/logo.png"/>
 		</div>
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

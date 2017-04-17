@@ -25,21 +25,23 @@
 						<center>UNetB
 						</center>
 					</h1>
-					<form role="form">
+					<form action="../login.php" method="post" id='form-contato' enctype='multipart/form-data'>
 						<fieldset>
 
 							<div class="form-group ls-login-user">
-								<label for="userEmail">E-mail</label>
-								<input class="form-control ls-login-bg-user input-lg" id="userEmail" aria-label="E-mail" placeholder="E-mail" type="text">
+								<label for="email">E-mail</label>
+								<input class="form-control ls-login-bg-user input-lg" id="userEmail" name="email" placeholder="E-mail" type="text">
 							</div>
 
 							<div class="form-group ls-login-password">
-								<label for="userPassword">Senha</label>
-								<input class="form-control ls-login-bg-password input-lg" id="userPassword" aria-label="Senha" placeholder="Senha" type="password">
+								<label for="password">Senha</label>
+								<input class="form-control ls-login-bg-password input-lg" id="userPassword" placeholder="Senha" type="password" name="password">
 							</div>
 
-							<input value="Entrar" onclick="validate()" class="btn btn-primary btn-lg btn-block bg-color-blue" type="submit">
+							<input class="btn btn-primary btn-lg btn-block bg-color-blue" type="submit" value="Entrar">
 							<p class="txt-center ls-login-signup">Não possui conta no UnetB?<a href="user_registration.php">Cadastre-se agora</a></p>
+
+							
 
 						</fieldset>
 					</form>
