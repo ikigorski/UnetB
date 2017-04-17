@@ -104,9 +104,9 @@ class User {
 
 }
 
-  $obj = new User($_POST['name'], $_POST['email'], $_POST['matricula'], $_POST['password'], $_POST['course'], $_POST['birthday'], $_POST['phone'] ,$_POST['gender']);
+/*  $obj = new User($_POST['name'], $_POST['email'], $_POST['matricula'], $_POST['password'], $_POST['course'], $_POST['birthday'], $_POST['phone'] ,$_POST['gender']);
 
   	var_dump($obj);
-  	$obj->save();
+  	$obj->save(); */
 
 ?>

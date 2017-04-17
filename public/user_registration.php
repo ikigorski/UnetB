@@ -22,7 +22,7 @@
 		<fieldset>
 			<legend><h1>Cadastro de Cliente</h1></legend>
 
-			<form action="../user.php" method="post" id='form-contato' enctype='multipart/form-data'>
+			<form action="../usercontrol.php" method="post" id='form-contato' enctype='multipart/form-data'>
 
 				<div class="row">
 					<label for="nome">Selecionar Foto</label>
