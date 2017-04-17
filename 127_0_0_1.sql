@@ -28,7 +28,7 @@ USE `unetb`;
 -- Estrutura da tabela `alunos`
 --
 
-CREATE TABLE `alunos` (
+CREATE TABLE `alunos` (		
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `matricula` int(11) NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE `alunos` (
   `birthday` date NOT NULL,
   `phone` int(11) DEFAULT NULL,
   `gender` enum('F','M') DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
@@ -48,6 +48,35 @@ CREATE TABLE `alunos` (
 --
 ALTER TABLE `alunos`
   ADD PRIMARY KEY (`matricula`);
+
+
+--
+-- funcoes
+--
+DELIMITER $$
+DROP FUNCTION IF EXISTS 'valida_usuario' $$
+CREATE FUNCTION 'valida usuario'(p_login VARCHAR(255),p_senha VARCHAR(100)) RETURNS INT(1);
+
+BEGIN
+DECLARE l_ret	INT(1) DEFAULT 0;
+	SET	l_ret = IFNULL((SELECT DISTINCT 1 FROM alunos 
+							WHERE email = p_login
+							AND password = MD5(p_senha)),0);
+	RETURN l_ret;
+	END	$$
+	DELIMITER; 
+
+/*
+exemplo de como criptografar e consultar senha em MD5
+paposql.blogspot.com.br/2014/06/com-criptografar-senha-no-mysql.html
+
+
+para passar valores ao banco
+INSERT INTO usuario( login, password ) VALUES ('admin',MD5('senha'));
+
+para consultar valores no banco
+valida_usuario(p_login VARCHAR(255), p_senha VARCHAR(100)) 
+*/
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
