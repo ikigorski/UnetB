@@ -15,8 +15,7 @@
 		header('location:public/logado.php');
 	
 	}else{
-		unset ($_SESSION['email']);
-		unset ($_SESSION['password']);
+		session_destroy();
 		header('location:public/loginInterface.php');	
 	}
 

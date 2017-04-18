@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>UNetB - Sobre</title>
-	<link rel="shortcut icon" href="../UNetB/images/favicon.png" type="image/x-icon" />
-	<link href="../css/bootstrap.css" rel="stylesheet">
-	<link href="../css/custom.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,11 +31,11 @@
 		
 	<div class="footer">
 		<?php
-			include "../public/footer.inc";
+			include "footer.inc";
 		?>
 	</div>
 
 </body>
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </html>
