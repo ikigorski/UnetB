@@ -9,6 +9,7 @@
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/custom.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/custom_login.css" >
 </head>
 
 	<body>
@@ -19,11 +20,16 @@
 				include "header.inc";
 			?>
 
+<<<<<<< HEAD
 			<div class="center-panel">
 				<div class="well bg-write box-login">
 					<h1 class="ls-login-logo">
 						<center>UNetB</center>
 					</h1>
+=======
+				<div class="well login-box">
+					<h3 class="login-title"><center><b>Entrar<b></center></h3>
+>>>>>>> 5b5db1f4bc2066793875152a3ccdc44ff4026351
 					<form action="../login.php" method="post" id='form-contato' enctype='multipart/form-data'>
 						<fieldset>
 
@@ -37,14 +43,12 @@
 								<input class="form-control ls-login-bg-password input-lg" id="userPassword" placeholder="Senha" type="password" name="password">
 							</div>
 
-							<input class="btn btn-primary btn-lg btn-block bg-color-blue" type="submit" value="Entrar">
+							<input class="btn login-button" type="submit" value="Entrar">
 							<p class="txt-center ls-login-signup">Não possui conta no UnetB?<a href="user_registration.php">Cadastre-se agora</a></p>
 
-							
 
 						</fieldset>
 					</form>
-				</div>
 			</div>
 			<div class="push"></div>
 		</div>

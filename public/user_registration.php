@@ -18,20 +18,26 @@
 	<?php
 		include "header.inc";
 	?>
+<<<<<<< HEAD
 	<div class='container'>
 		
 			<legend><h1>Cadastro de Cliente</h1></legend>
+=======
+	<div class= "registration-box well">
+		<fieldset>
+			<legend><h1><b>Cadastro de Usuário</b></h1></legend>
+>>>>>>> 5b5db1f4bc2066793875152a3ccdc44ff4026351
 
 			<form action="../usercontrol.php" method="post" id='form-contato' enctype='multipart/form-data'>
 
 				<div class="row">
 					<label for="nome">Selecionar Foto</label>
-					<div class="col-md-2">
+					<div class="col-md-4">
 						<a href="#" class="thumbnail">
 							<img src="images/standard_profile_image.jpg" height="190" width="150" id="foto-cliente">
 						</a>
 					</div>
-					<input type="file" name="foto" id="foto" value="foto" >
+					<input type="file" name="foto" id="foto" value="foto" class="photo-submit">
 				</div>
 
 				<div class="form-group">
@@ -157,7 +163,7 @@
 				</div>
 
 				<input type="hidden" name="acao" value="incluir">
-				<button type="submit" class="btn btn-primary" id='botao'>Gravar</button>
+				<button type="submit" class="btn btn-primary button-register" id='botao'>Gravar</button>
 			</form>
 		</fieldset>
 	</div>
