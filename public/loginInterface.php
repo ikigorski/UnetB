@@ -20,25 +20,22 @@
 				include "header.inc";
 			?>
 
-<<<<<<< HEAD
 			<div class="center-panel">
 				<div class="well bg-write box-login">
 					<h1 class="ls-login-logo">
 						<center>UNetB</center>
 					</h1>
-=======
 				<div class="well login-box">
 					<h3 class="login-title"><center><b>Entrar<b></center></h3>
->>>>>>> 5b5db1f4bc2066793875152a3ccdc44ff4026351
 					<form action="../login.php" method="post" id='form-contato' enctype='multipart/form-data'>
 						<fieldset>
 
-							<div class="form-group ls-login-user">
+							<div class="form-group-login ls-login-user">
 								<label for="email">E-mail</label>
 								<input class="form-control ls-login-bg-user input-lg" id="userEmail" name="email" placeholder="E-mail" type="text">
 							</div>
 
-							<div class="form-group ls-login-password">
+							<div class="form-group-login ls-login-password">
 								<label for="password">Senha</label>
 								<input class="form-control ls-login-bg-password input-lg" id="userPassword" placeholder="Senha" type="password" name="password">
 							</div>
