@@ -22,8 +22,7 @@
 			<div class="center-panel">
 				<div class="well bg-write box-login">
 					<h1 class="ls-login-logo">
-						<center>UNetB
-						</center>
+						<center>UNetB</center>
 					</h1>
 					<form action="../login.php" method="post" id='form-contato' enctype='multipart/form-data'>
 						<fieldset>

@@ -19,7 +19,7 @@
 		include "header.inc";
 	?>
 	<div class='container'>
-		<fieldset>
+		
 			<legend><h1>Cadastro de Cliente</h1></legend>
 
 			<form action="../usercontrol.php" method="post" id='form-contato' enctype='multipart/form-data'>
