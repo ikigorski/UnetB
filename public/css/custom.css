@@ -3,6 +3,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: #1212B8;
 }
 #map{
     height: 100%;
@@ -25,7 +26,74 @@ html, body {
     text-align: center;
 }
 
-/* CUSTOMIZAÇÃO DO CADASTRO */
+/* --------CUSTOMIZAÇÃO DO CADASTRO------------*/
+
+.registration-box{
+  width: 698px;
+  background-color: blue;
+}
+
+/*-------RESPONSIVIDADE DO FORMULÁRIO DE CADASTRO--------*/
+@media screen and (min-width: 1200px) {
+    .login-box{
+      background-color: blue;
+    }
+}
+@media screen and (max-width: 480px) {
+  .registration-box{
+    width: 90%;
+    height: 80%;
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: pink;
+  }
+  .thumbnail{
+    width: 20%;
+    height: 20%;
+    margin-left: 32%;
+  }
+
+  .photo-submit{
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 5%;
+  }
+}
+
+@media screen and (min-width: 481px) {
+    .registration-box{
+      width: 90%;
+      height: 80%;
+      margin-top: 20%;
+      margin-left: 5%;
+      margin-right: 5%;
+      background-color: black;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .registration-box{
+    width: 43%;
+    margin-left: 28.5%;
+    margin-right: 28.5%;
+    margin-top: 7%;
+    background-color: #e6e6ff;
+  }
+
+  .thumbnail{
+    margin-left: 27%;
+    width: 58%;
+    height: 58%;
+  }
+}
+
+/*--------------OUTROS ATRIBUTOS DO CADASTRO--------------------*/
+
+.form-group{
+  margin-left: 5%;
+  margin-right: 5%;
+}
 
 fieldset{
 	margin:1% auto;
@@ -37,23 +105,19 @@ fieldset{
 	color: red;
 }
 
-.center-panel{
-  width: 500px;
-  height: 390px;
-  margin: 70px auto;
-  font-family: 'Raleway', sans-serif;
+.button-register{
+  width: 15%;
+  margin-left: 42.5%;
+  margin-right: 42.5%;
+  margin-bottom: 5%;
 }
 
-.bg-color-blue{
-  background-color: #1212B8;
-}
+  legend{
+    text-align: center;
+  }
 
-.ls-login-logo{
-  color: #1212B8;
-}
+/*---------PÁGINA COM INFORMAÇÕES DE LARGURA DE BANDA-------*/
 
-
-/* Set a style for all buttons */
 button {
     background-color: #4CAF50;
     color: white;

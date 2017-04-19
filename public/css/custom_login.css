@@ -1,0 +1,71 @@
+
+/*----------CAIXA DE LOGIN RESPONSIVA------------*/
+.login-box{
+
+  width: 500px;
+  height: 500px;
+  background-color: orange;
+}
+
+@media screen and (min-width: 1200px) {
+    .login-box{
+      background-color: blue;
+    }
+}
+@media screen and (max-width: 480px) {
+  .login-box{
+    width: 90%;
+    height: 80%;
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: pink;
+  }
+}
+
+@media screen and (min-width: 481px) {
+    .login-box{
+      width: 90%;
+      height: 80%;
+      margin-top: 20%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .login-box{
+    width: 43%;
+    margin-left: 28.5%;
+    margin-right: 28.5%;
+    margin-top: 7%;
+    background-color: #e6e6ff;
+  }
+}
+
+/*----------OUTROS ATRIBUTOS - LOGIN------------*/
+
+/*----------COR DA LOGO------------*/
+.ls-login-logo{
+  color: #1212B8;
+}
+/*----------BOTÃO DE LOGIN------------*/
+.login-button{
+  color: white;
+  font-size: 150%;
+  background-color: #1212B8;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  height: 30%;
+
+}
+
+.ls-login-signup{
+  margin-left: 5%;
+}
+
+.login-title{
+  font-size: 150%;
+}
