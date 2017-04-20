@@ -20,51 +20,46 @@
 	?>
 
 	<div class='container'>
-		
-			<legend><h1>Cadastro de Cliente</h1></legend>
-
 	<div class= "registration-box well">
 		<fieldset>
-			<legend><h1><b>Cadastro de Usuário</b></h1></legend>
+			<h1 class: "register-legend"><b>Cadastro de Usuário</b></h1>
 
 
 			<form action="../usercontrol.php" method="post" id='form-contato' enctype='multipart/form-data'>
 
 				<div class="row">
-					<label for="nome">Selecionar Foto</label>
-					<div class="col-md-4">
+					<label for="nome" class="photo-title">Selecionar Foto</label>
 						<a href="#" class="thumbnail">
 							<img src="images/standard_profile_image.jpg" height="190" width="150" id="foto-cliente">
 						</a>
-					</div>
-					<input type="file" name="foto" id="foto" value="foto" class="photo-submit">
+					<input  type="file" name="foto" id="foto" value="foto" class="photo-submit">
 				</div>
 
-				<div class="form-group">
+				<div class="form-group-register">
 					<label for="name">*Nome</label>
 					<input type="text" class="form-control" id="name" name="name" placeholder="Infome o Nome">
 					<span class='msg-erro msg-name'></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group-register">
 					<label for="email">*E-mail</label>
 					<input type="email" class="form-control" id="email" name="email" placeholder="Informe o E-mail">
 					<span class='msg-erro msg-email'></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group-register">
 					<label for="matricula">*Matrícula</label>
 					<input type="matricula" class="form-control" id="matricula" name="matricula" placeholder="Informe a Matrícula" maxlength = "10">
 					<span class='msg-erro msg-matricula'></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group-register">
 					<label for="password">*Senha</label>
 					<input type="password" class="form-control" id="password" name="password" placeholder="Infome a Senha">
 					<span class='msg-erro msg-password'></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group-register">
 					<label for="course">*Curso</label>
 					<select class="form-control" name="course" id="course">
 						<option value="">Selecione o Seu Curso</option>
@@ -139,7 +134,7 @@
 					<span class='msg-erro msg-course'></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group-register">
 					<label for="gender">*Sexo</label>
 					<select class="form-control" name="gender" id="gender">
 						<option value="">Selecione o Sexo</option>
@@ -150,20 +145,20 @@
 					<span class='msg-erro msg-gender'></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group-register">
 					<label for="birthday">Data de Nascimento</label>
-					<input type="date" class="form-control" id="birthday" name="birthday">
+					<input type="date" class="form-control" id="birthday" name="birthday" placeholder="dd/mm/aaaa">
 					<span class='msg-erro msg-birthday'></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group-register">
 					<label for="phone">Celular</label>
 					<input type="phone" class="form-control" id="phone" maxlength="13" name="phone" placeholder="Informe o Celular">
 					<span class='msg-erro msg-phone'></span>
 				</div>
 
 				<input type="hidden" name="acao" value="incluir">
-				<button type="submit" class="btn btn-primary button-register" id='botao'>Gravar</button>
+				<button type="submit" class="btn register-button" id='botao'>Gravar</button>
 			</form>
 		</fieldset>
 	</div>
