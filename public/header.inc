@@ -1,6 +1,6 @@
 <!-- MENU DE NAVEGAÇÃO DO TOPO!-->
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-color">
 	<div class="container-fluid">
 		<!-- PERMITE A NAVEGAÇÃO EM DISPOSITIVOS MOBILE!-->
 		<div class="navbar-header">
@@ -11,7 +11,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="#">UNetB</a>
-			<img src="../public/images/logo.png"/>
+			<img src="../public/images/logo.png" class= "logo-nav"/>
 		</div>
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

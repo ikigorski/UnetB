@@ -36,7 +36,7 @@
 							</div>
 
 							<input class="btn login-button" type="submit" value="Entrar">
-							<p class="txt-center ls-login-signup">Não possui conta no UnetB?<a href="user_registration.php">Cadastre-se agora</a></p>
+							<p class="no-account-text">Não possui conta no UnetB?<a href="user_registration.php" class= "register-link">Cadastre-se agora</a></p>
 
 
 						</fieldset>

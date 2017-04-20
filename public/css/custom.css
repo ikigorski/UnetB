@@ -19,6 +19,17 @@ html, body {
     height: 50px; /* .push must be the same height as .footer */
 }
 
+/*-------CUSTOMIZAÇÃO DO MENU DE NAVEGAÇÃO-----------*/
+
+.logo-nav{
+  width: 22%;
+  height: 22%;
+}
+
+.navbar-color{
+  background-color: #21635d;
+}
+
 /* CUSTOMIZAÇÃO DO FOOTER */
 .panel{
 	margin-bottom: 0px;

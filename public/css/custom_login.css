@@ -4,7 +4,7 @@
 
   width: 500px;
   height: 500px;
-  border-radius: 70px;
+  border-radius: 31px;
   background-color: #367e41;
   border-color: #214d46;
 }
@@ -81,4 +81,12 @@
 }
 .body-login{
   background-color: #214d46;
+}
+
+.register-link{
+  color:#214d46;
+}
+
+.no-account-text{
+  margin-left: 15%;
 }
