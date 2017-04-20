@@ -18,15 +18,15 @@
 	<?php
 		include "header.inc";
 	?>
-<<<<<<< HEAD
+
 	<div class='container'>
 		
 			<legend><h1>Cadastro de Cliente</h1></legend>
-=======
+
 	<div class= "registration-box well">
 		<fieldset>
 			<legend><h1><b>Cadastro de Usuário</b></h1></legend>
->>>>>>> 5b5db1f4bc2066793875152a3ccdc44ff4026351
+
 
 			<form action="../usercontrol.php" method="post" id='form-contato' enctype='multipart/form-data'>
 

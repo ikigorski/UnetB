@@ -11,7 +11,6 @@
 	
 	if(mysqli_num_rows ($result) > 0 ){
 		$_SESSION['email'] = $email;
-		$_SESSION['password'] = $password;
 		header('location:public/logado.php');
 	
 	}else{
