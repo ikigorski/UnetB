@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="css/custom_login.css" >
 </head>
 
-	<body>
+	<body class= "body-login">
 
 		<div class="wrapper">
 
@@ -20,8 +20,6 @@
 				include "header.inc";
 			?>
 
-			<div class="center-panel">
-				<div class="well bg-write box-login">
 				<div class="well login-box">
 					<h3 class="login-title"><center><b>Entrar<b></center></h3>
 					<form action="../login.php" method="post" id='form-contato' enctype='multipart/form-data'>
