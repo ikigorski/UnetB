@@ -41,6 +41,12 @@
     margin-top: 7%;
     background-color: #e6e6ff;
   }
+
+  .form-group-login{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-bottom: 4%;
+  }
 }
 
 /*----------OUTROS ATRIBUTOS - LOGIN------------*/
@@ -54,11 +60,11 @@
   color: white;
   font-size: 150%;
   background-color: #1212B8;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 85%;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
   margin-bottom: 5%;
-  height: 30%;
+  height: 35%;
 
 }
 

@@ -22,9 +22,6 @@
 
 			<div class="center-panel">
 				<div class="well bg-write box-login">
-					<h1 class="ls-login-logo">
-						<center>UNetB</center>
-					</h1>
 				<div class="well login-box">
 					<h3 class="login-title"><center><b>Entrar<b></center></h3>
 					<form action="../login.php" method="post" id='form-contato' enctype='multipart/form-data'>
