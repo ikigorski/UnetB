@@ -18,7 +18,7 @@
   .login-box{
     width: 90%;
     height: 80%;
-    margin-top: 20%;
+    margin-top: 32%;
     margin-left: 5%;
     margin-right: 5%;
     background-color: pink;
@@ -34,7 +34,7 @@
       margin-right: 10%;
       background-color: black;
     }
-}
+  }
 
 @media screen and (min-width: 768px) {
   .login-box{
@@ -44,16 +44,16 @@
     margin-top: 7%;
     background-color: #60bcca;
   }
-
-  .form-group-login{
-    width: 85%;
-    margin-left: 7.5%;
-    margin-bottom: 4%;
-    color: #CED8F6;
-  }
 }
 
 /*----------OUTROS ATRIBUTOS - LOGIN------------*/
+
+.form-group-login{
+  width: 85%;
+  margin-left: 7.5%;
+  margin-bottom: 4%;
+  color: #CED8F6;
+}
 
 /*----------COR DA LOGO------------*/
 .ls-login-logo{
@@ -68,6 +68,7 @@
   margin-left: 7.5%;
   margin-right: 7.5%;
   margin-bottom: 5%;
+  margin-top: 5%;
   height: 35%;
 
 }
@@ -89,5 +90,5 @@
 }
 
 .no-account-text{
-  margin-left: 15%;
+  margin-left: 10%;
 }
