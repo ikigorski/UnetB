@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `unetb`
 --
-CREATE DATABASE IF NOT EXISTS `unetb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `unetb` DEFAULT CHARACTER SET utf8;
 USE `unetb`;
 
 -- --------------------------------------------------------
@@ -31,7 +31,7 @@ USE `unetb`;
 CREATE TABLE `alunos` (		
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `matricula` int(11) NOT NULL,
+  `matricula` varchar(10) NOT NULL,
   `password` varchar(100) NOT NULL,
   `course` varchar(255) DEFAULT NULL,
   `birthday` date NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE `alunos` (
 ALTER TABLE `alunos`
   ADD PRIMARY KEY (`matricula`);
 
-
+/*
 --
 -- funcoes
 --
@@ -66,7 +66,7 @@ DECLARE l_ret	INT(1) DEFAULT 0;
 	END	$$
 	DELIMITER; 
 
-/*
+
 exemplo de como criptografar e consultar senha em MD5
 paposql.blogspot.com.br/2014/06/com-criptografar-senha-no-mysql.html
 

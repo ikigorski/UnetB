@@ -1,0 +1,24 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+#map{
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+	margin-top: 50px;
+}
+.footer, .push {
+	height: 50px; /* .push must be the same height as .footer */
+}
+.teste{
+	margin-top: 4%;
+}
