@@ -17,9 +17,8 @@
 			include "public/header.inc";
 		?>
 
-		
+
 		<div id="map"></div>
-		<img src="public/images/logo.png"/>
 		
 	</body>
 

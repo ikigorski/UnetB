@@ -4,14 +4,14 @@
 
   width: 500px;
   height: 500px;
-  border-radius: 31px;
+  border-radius: 15px;
   background-color: #367e41;
-  border-color: #214d46;
+  border-color: #60bcca;
 }
 
 @media screen and (min-width: 1200px) {
     .login-box{
-      background-color: blue;
+      background-color: green;
     }
 }
 @media screen and (max-width: 480px) {
@@ -27,11 +27,12 @@
 
 @media screen and (min-width: 481px) {
     .login-box{
-      width: 90%;
+      width: 70%;
       height: 80%;
       margin-top: 20%;
-      margin-left: 5%;
-      margin-right: 5%;
+      margin-left: 15%;
+      margin-right: 10%;
+      background-color: black;
     }
 }
 
@@ -41,7 +42,7 @@
     margin-left: 28.5%;
     margin-right: 28.5%;
     margin-top: 7%;
-    background-color: #21635d;
+    background-color: #60bcca;
   }
 
   .form-group-login{
@@ -62,7 +63,7 @@
 .login-button{
   color: white;
   font-size: 150%;
-  background-color: #214d46;
+  background-color: #3787a6;
   width: 85%;
   margin-left: 7.5%;
   margin-right: 7.5%;
@@ -80,7 +81,7 @@
   color: white;
 }
 .body-login{
-  background-color: white;
+  background-color: #e0ecf5;
 }
 
 .register-link{

@@ -22,14 +22,11 @@ html, body {
 
 /*-------CUSTOMIZAÇÃO DO MENU DE NAVEGAÇÃO-----------*/
 
-.logo-nav{
-  width: 22%;
-  height: 22%;
+.navbar-color{
+  background-color: #60bcca;
+  border-color: #60bcca;
 }
 
-.navbar-color{
-  background-color: #21635d;
-}
 
 /* CUSTOMIZAÇÃO DO FOOTER */
 .panel{
@@ -46,7 +43,7 @@ html, body {
 
 /*-------RESPONSIVIDADE DO FORMULÁRIO DE CADASTRO--------*/
 @media screen and (min-width: 1200px) {
-    .login-box{
+    .registration-box{
       background-color: blue;
     }
 }

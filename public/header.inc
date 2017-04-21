@@ -10,8 +10,8 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">UNetB</a>
-			<img src="../public/images/logo.png" class= "logo-nav"/>
+			<a class="navbar-brand" href="http://localhost/UnetB/index.php"><img src="http://localhost/UnetB/public/images/logo.png" width="40px"></a>
+		
 		</div>
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
