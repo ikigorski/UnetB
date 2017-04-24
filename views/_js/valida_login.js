@@ -31,11 +31,11 @@ function validaCadastro(evt){
 	/* Validação do campo password*/
 	caixa_password = document.querySelector('.msg-password');
 	if(password.value == ""){
-		caixa_password.innerHTML = "Favor preencher a senha";
+		caixa_password.innerHTML = 'Favor preencher a senha';
 		caixa_password.style.display = 'block';
 		contErro += 1;
 	}else if(password.value.length < 6){
-		caixa_password.innerHTML = "Senha deve ter no mínimo 6 caracteres";
+		caixa_password.innerHTML = 'Senha deve ter no mínimo 6 caracteres';
 		caixa_password.style.display = 'block';
 		contErro += 1;
 	}else{
