@@ -1,32 +1,18 @@
 html, body {
 	height: 100%;
-	width: 100%;
-	margin: 0px;
+	width: 100%;	
 	background-color: #377777;
 }
 
 #map{
 	height: 100%;
-}
-
-.wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 60px auto -40px auto; /* the bottom margin is the negative value of the footer's height */
-	
-}
-
-.footer, .push {
-	height: 40px; /* .push must be the same height as .footer */
-	margin-bottom: 0px;
+	margin-top: -51px;
 }
 
 .teste{
 	margin-top: 4%;
 }
 
-.navbar-fixed-top{
+.navbar{
 	margin-bottom: 0px;
-
 }
