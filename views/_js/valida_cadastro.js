@@ -25,24 +25,6 @@ function validaCadastro(evt){
 	var filtro_matricula = /^[0-9 /]+$/;
 	var contErro = 0;
 
-
-	/* Validação do campo name */
-	caixa_name = document.querySelector('.msg-name');
-	if(name.value.length != 0){
-		if(name.value.length < 3){
-			caixa_name.innerHTML = "O nome deve conter no mínimo 3 letras";
-			caixa_name.style.display = 'block';
-			contErro += 1;
-		}else if(!filtro_name.test(name.value)){
-			caixa_name.innerHTML = "O nome deve conter apenas letras";
-			caixa_name.style.display = 'block';
-			contErro += 1;
-		}else{
-			caixa_name.style.display = 'none';
-		}
-	}
-
-
 	/* Validação do campo email */
 	caixa_email = document.querySelector('.msg-email');
 	if(email.value == ""){
@@ -55,22 +37,6 @@ function validaCadastro(evt){
 		contErro += 1;
 	}else{
 		caixa_email.style.display = 'none';
-	}
-
-	/* Validação do campo Matrícula*/
-	caixa_matricula = document.querySelector('.msg-matricula');
-	if(matricula.value.length != 0){
-		if(matricula.value.length != 10){
-			caixa_matricula.innerHTML = "Favor preencher a Matrícula por completo";
-			caixa_matricula.style.display = 'block';
-			contErro += 1;
-		}else if(!filtro_matricula.test(matricula.value)){
-			caixa_matricula.innerHTML = "Favor preencher a Matrícula usando apenas números";
-			caixa_matricula.style.display = 'block';
-			contErro += 1;
-		}else{
-			caixa_matricula.style.display = 'none';
-		}
 	}
 
 	/* Validação do campo password*/
@@ -87,13 +53,47 @@ function validaCadastro(evt){
 		caixa_password.style.display = 'none';
 	}
 
+	/* Validação do campo name */
+	caixa_name = document.querySelector('.msg-name');
+	caixa_name.style.display = 'none';
+	if(name.value.length != 0){
+		if(name.value.length < 3){
+			caixa_name.innerHTML = "O nome deve conter no mínimo 3 letras";
+			caixa_name.style.display = 'block';
+			contErro += 1;
+		}else if(!filtro_name.test(name.value)){
+			caixa_name.innerHTML = "O nome deve conter apenas letras";
+			caixa_name.style.display = 'block';
+			contErro += 1;
+		}else{
+			caixa_name.style.display = 'none';	
+		}
+	}
+
+	/* Validação do campo Matrícula*/
+	caixa_matricula = document.querySelector('.msg-matricula');
+	caixa_matricula.style.display = 'none';	
+	if(matricula.value.length != 0){
+		if(matricula.value.length != 10){
+			caixa_matricula.innerHTML = "Favor preencher a Matrícula por completo";
+			caixa_matricula.style.display = 'block';
+			contErro += 1;
+		}else if(!filtro_matricula.test(matricula.value)){
+			caixa_matricula.innerHTML = "Favor preencher a Matrícula usando apenas números";
+			caixa_matricula.style.display = 'block';
+			contErro += 1;
+		}else{
+			caixa_matricula.style.display = 'none';
+		}
+	}
+
 
 	if(contErro > 0){
 		evt.preventDefault();
 	}
 }
 
-/* Função para formatar dados conforme parâmetro enviado, DATA e CELULAR */
+/* Função para formatar dados conforme parâmetro enviado*/
 function mascaraTexto(t, mask){
 	var i = t.value.length;
 	var saida = mask.substring(1,0);

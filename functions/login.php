@@ -11,11 +11,12 @@
 	
 	if(mysqli_num_rows ($result) > 0 ){
 		$_SESSION['email'] = $email;
-		header('location:public/logado.php');
+		header('location:../views/home-login-view.php');
 	
 	}else{
 		session_destroy();
-		header('location:public/loginInterface.php');	
+		echo "erro";
+		//header('location:public/loginInterface.php');
 	}
 
 ?>

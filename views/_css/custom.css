@@ -4,15 +4,20 @@ html, body {
 	background-color: #377777;
 }
 
+/* CUSTOMIZAÇÃO DO MAPA*/
 #map{
 	height: 100%;
 	margin-top: -51px;
 }
-
-.teste{
+/* TAMANHO DA BORDA DE TOPO DOS FORMULÁRIOS DE CADASTRO E LOGIN*/
+.margem-top-form{
 	margin-top: 4%;
 }
-
+/* TAMANHO DA MARGEM DE BAIXO DO HEADER*/
 .navbar{
 	margin-bottom: 0px;
+}
+/* COR DA MSG DE ERRO DOS FURMULÁRIOS*/
+.msg-erro{
+	color: red;
 }

@@ -16,7 +16,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">		
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="home-logout-view.php">HOME</a></li>
-				<li><a href="#">COMO USAR</a></li>
+				<li><a href="how-to-use-view.php">COMO USAR</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">USUÁRIO <span class="caret"></span></a>
 					<ul class="dropdown-menu">

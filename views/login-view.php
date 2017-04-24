@@ -16,11 +16,11 @@
 	<!-- INCLUE O HEADER NA PÁGINA -->
 	<?php include "_includes/header.php";?>
 		
-	<div class='container-fluid col-lg-4 col-md-4 col-sm-6 col-xs-10 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-1 teste' >
+	<div class='container-fluid col-lg-4 col-md-4 col-sm-6 col-xs-10 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-1 margem-top-form' >
 		<div class= "registration-box well">
 			<fieldset>
 				<h1 class="register-legend"><b>Login</b></h1>
-				<form action="../controllers/user-controller.php" method="post" id='form-contato' enctype='multipart/form-data'>
+				<form action="../functions/login.php" method="post" id='form-contato' enctype='multipart/form-data'>
 
 					<div class="form-group">
 						<label for="email">E-mail</label>
@@ -43,7 +43,7 @@
 	</div>
 
 </body>
-	<script src= "_js/login.js"></script>
+	<script src="_js/valida_login.js"></script>
 	<script src="_js/jquery.min.js"></script>
 	<script src="_js/bootstrap.js"></script>
 </html>
