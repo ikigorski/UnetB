@@ -1,10 +1,10 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	margin: 0;
-	padding: 0;
-
+	margin: 0px;
+	background-color: #377777;
 }
+
 #map{
 	height: 100%;
 }
@@ -13,12 +13,20 @@ html, body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
-	margin-top: 50px;
+	margin: 60px auto -40px auto; /* the bottom margin is the negative value of the footer's height */
+	
 }
+
 .footer, .push {
-	height: 50px; /* .push must be the same height as .footer */
+	height: 40px; /* .push must be the same height as .footer */
+	margin-bottom: 0px;
 }
+
 .teste{
 	margin-top: 4%;
+}
+
+.navbar-fixed-top{
+	margin-bottom: 0px;
+
 }

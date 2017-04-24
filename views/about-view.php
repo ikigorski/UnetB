@@ -15,26 +15,12 @@
 		
 		<div class="wrapper">
 
-		<?php include "_includes/header.php";?>
+
+			<?php include "_includes/header.php";?>
+		
+
 			
-			<h1>Em Construção 1</h1>
-			<h1>Em Construção 2</h1>
-			<h1>Em Construção 3</h1>
-			<h1>Em Construção 4</h1>
-			<h1>Em Construção 1</h1>
-			<h1>Em Construção 2</h1>
-			<h1>Em Construção 1</h1>
-			<h1>Em Construção 2</h1>
-			<h1>Em Construção 3</h1>
-			<h1>Em Construção 4</h1>
-			<h1>Em Construção 1</h1>
-			<h1>Em Construção 2</h1>
-			<h1>Em Construção 1</h1>
-			<h1>Em Construção 2</h1>
-			<h1>Em Construção 3</h1>
-			<h1>Em Construção 4</h1>
-			<h1>Em Construção 1</h1>
-			<h1>Em Construção 2</h1>
+		
 
 			<div class="push"></div>
 		</div>
