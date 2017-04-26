@@ -9,6 +9,8 @@
 	<link href="_css/bootstrap.css" rel="stylesheet">
 	<link href="_css/custom.css" rel="stylesheet">
 	<title>UNetB - Home</title>
+
+
 <?php
 	
 	session_start();
@@ -17,7 +19,7 @@
 		header('location:loginInterface.php');
 	}
 
-	include "header.inc";
+	include "_includes/header.php";
 	$logado = $_SESSION['email'];
 ?>
 

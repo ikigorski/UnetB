@@ -11,7 +11,7 @@
 
 	if(mysqli_num_rows ($result) > 0 ){
 		$_SESSION['email'] = $email;
-		header('location:public/logado.php');
+		header('location:http://localhost/UnetB/views/home-login-view.php');
 
 	}else{
 		session_destroy();
