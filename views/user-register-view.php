@@ -17,9 +17,9 @@
 	<?php include "_includes/header.php";?>
 
 	<div class='container-fluid col-lg-4 col-md-4 col-sm-6 col-xs-10 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-1 margem-top-form' >
-		<div class= "registration-box well">
+		<div class= "login-box well">
 			<fieldset>
-				<h1 class="register-legend"><b>Cadastro de Usuário</b></h1>
+				<h1 class="register-legend"><center><b>Cadastro de Usuário</b></center></h1>
 				<form action="../controllers/user-controller.php" method="post" id='form-contato' enctype='multipart/form-data'>
 
 					<div class="form-group">
@@ -47,7 +47,7 @@
 					</div>
 
 					<input type="hidden" name="acao" value="incluir">
-					<button type="submit" class="btn register-button" id='botao'>Gravar</button>
+					<center><button type="submit" class="btn btn-default" id='botao'>Gravar</button></center>
 					<span class='msg-erro msg-cadastro'></span>
 
 				</form>

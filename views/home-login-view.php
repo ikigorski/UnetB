@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="_images/favicon.png" type="image/x-icon"/>
 	<link href="_css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="_css/bootstrap-theme.css">
 	<link href="_css/custom.css" rel="stylesheet">
 	<title>UNetB - Home</title>
 
@@ -22,27 +23,15 @@
 	include "_includes/header.php";
 	$logado = $_SESSION['email'];
 ?>
-
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>SISTEMA WEB</title>
 </head>
 
 <body>
-<table width="800" height="748" border="50">
-	<tr>
-		<td height="90" colspan="2" bgcolor="#CCCCCC">
+	<div class="panel">
+		<h3>
 		<?php 
 			echo" Bem vindo $logado";
 		?>
-		</td>
-	</tr>
-	<tr>
-		<td width="103" height="410" bgcolor="#CCCCCC">MENU AQUI</td>
-		<td width="546">CONTEUDO E ICONES AQUI</td>
-	</tr>
-	<tr>
-		<td colspan="2" bgcolor="#000000"> </td>
-	</tr>
-</table>
+		</h3>
+	</div>
 </body>
 </html>

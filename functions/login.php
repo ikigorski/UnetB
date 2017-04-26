@@ -15,7 +15,7 @@
 
 	}else{
 		session_destroy();
-		header('location:public/loginInterface.php');
+		header('location:http://localhost/UnetB/views/login-view.php');
 	}
 
 ?>

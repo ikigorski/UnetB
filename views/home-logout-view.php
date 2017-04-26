@@ -14,7 +14,7 @@
 <body> 	
 
 	<?php include "_includes/header.php";?>
-	<div id="map"></div>
+	<div id="map" class="map"></div>
 
 </body>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXumgSxD3IY_5VhkxwyEQcbBVOS55H-xQ&callback=initMap"></script>

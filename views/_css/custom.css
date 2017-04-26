@@ -1,7 +1,7 @@
 html, body {
 	height: 100%;
-	width: 100%;	
-	background-color: #377777;
+	width: 100%;
+	background-image: url("../_images/background.jpeg");
 }
 
 /* CUSTOMIZAÇÃO DO MAPA*/
@@ -20,4 +20,19 @@ html, body {
 /* COR DA MSG DE ERRO DOS FURMULÁRIOS*/
 .msg-erro{
 	color: red;
+}
+/*TELA DE LOGIN*/
+
+.login-box{
+	border-color: transparent;
+	color: black;
+	background-color: rgba(123, 123, 123, 0.3);
+}
+/*LOGOTIPO*/
+.logo{
+	width: 10%;
+}
+/*DIMENSÃO DO MAPA*/
+.map{
+	width: 100%;
 }
