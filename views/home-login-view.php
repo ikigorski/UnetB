@@ -17,7 +17,7 @@
 	session_start();
 	
 	if(!isset($_SESSION['email'])){
-		header('location:loginInterface.php');
+		header('location:login-view.php');
 	}
 
 	include "_includes/header.php";

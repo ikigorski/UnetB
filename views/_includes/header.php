@@ -8,7 +8,9 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="home-logout-view.php"><img src="_images/logounetb.png" class="logo">UNetB</a>
+			<a class="navbar-brand" href="home-logout-view.php">UnetB
+				<!--img alt="Brand" src="_images/logo.png" style="margin-top: -25px"-->
+			</a>
 		</div>
 		
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">		
@@ -27,7 +29,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="how-to-use-view.php">Como Usar</a></li>
 						<li><a href="#">Teste de Velocidade</a></li>
-						<li><a href="#">Sobre</a></li>	
+						<li><a href="about-view.php">Sobre</a></li>	
 					</ul>
 				</li>
 			</ul>

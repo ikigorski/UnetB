@@ -20,7 +20,7 @@
 		<div class= "login-box well">
 			<fieldset>
 				<h1 class="register-legend"><center><b>Login</b></center></h1>
-				<form action="../functions/login.php" method="post" id='form-contato' enctype='multipart/form-data'>
+				<form action="login.php" method="post" id='form-contato' enctype='multipart/form-data'>
 
 					<div class="form-group">
 						<label for="email">E-mail</label>

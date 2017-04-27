@@ -15,7 +15,16 @@
 
 	}else{
 		session_destroy();
-		header('location:http://localhost/UnetB/views/login-view.php');
+		 
+		include "login-view.php";
+		echo"
+			<script>
+				caixa_password = document.querySelector('.msg-password');
+				caixa_password.innerHTML = 'Usuário ou senha inválido.';
+				caixa_password.style.display = 'block';
+			</script>
+		";
+		//header('location:http://localhost/UnetB/views/login-view.php');
 	}
 
 ?>
