@@ -16,7 +16,7 @@
 	<!-- INCLUE O HEADER NA PÁGINA -->
 	<?php include "_includes/header.php";?>
 
-	<div class='container-fluid col-lg-4 col-md-4 col-sm-6 col-xs-10 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-1 margem-top-form' >
+	<div class='container-fluid col-lg-4 col-md-4 col-sm-6 col-xs-10 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-1 child vertical' >
 		<div class= "login-box well">
 			<fieldset>
 				<h1 class="register-legend"><center><b>Cadastro de Usuário</b></center></h1>

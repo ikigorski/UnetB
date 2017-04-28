@@ -8,7 +8,8 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="home-logout-view.php">UnetB
+
+			<a class="navbar-brand" href="home-logout-view.php">UnetB <span class="glyphicon glyphicon-signal">
 				<!--img alt="Brand" src="_images/logo.png" style="margin-top: -25px"-->
 			</a>
 		</div>
@@ -20,7 +21,6 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Usuário</a>
 					<ul class="dropdown-menu">
 						<li><a href="user-register-view.php">Cadastrar</a></li>
-						<li role="separator" class="divider"></li>
 						<li><a href="login-view.php">Entrar</a></li>
 					</ul>
 				</li>
