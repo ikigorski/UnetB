@@ -10,10 +10,6 @@ html, body {
 	height: 100%;
 	margin-top: -51px;
 }
-/* TAMANHO DA BORDA DE TOPO DOS FORMULÁRIOS DE CADASTRO E LOGIN*/
-.margem-top-form{
-	margin-top: 4%;
-}
 /* TAMANHO DA MARGEM DE BAIXO DO HEADER*/
 .navbar{
 	margin-bottom: 0px;
@@ -21,13 +17,6 @@ html, body {
 /* COR DAS MEMSAGENS DE ERRO DOS FURMULÁRIOS*/
 .msg-erro{
 	color: red;
-}
-/*TELA DE LOGIN*/
-
-.login-box{
-	border-color: transparent;
-	color: white;
-	background-color: rgba(123, 123, 123, 0.3);
 }
 /*DIMENSÃO DO MAPA*/
 .map{
