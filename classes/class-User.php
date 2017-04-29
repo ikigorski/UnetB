@@ -52,7 +52,7 @@ class User {
 
 		$con = mysqli_connect("127.0.0.1", "root", "", "unetb");
 
-		mysqli_query($con,"INSERT INTO alunos (name, email, matricula, password) 
+		mysqli_query($con,"INSERT INTO user (name, email, matricula, password) 
 							VALUES ('{$this->name}','{$this->email}','{$this->matricula}','{$this->password}')
 					");	
 

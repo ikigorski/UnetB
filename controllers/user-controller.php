@@ -6,7 +6,7 @@
 
 		public function registeruser() /* registrando o usuário (sem validações) */
 		{
-			$User = new User($_POST['name'], $_POST['email'], $_POST['matricula'],$_POST['password']);
+			$User = new User(utf8_decode($_POST['name']), utf8_decode($_POST['email']), utf8_decode($_POST['matricula']), utf8_decode($_POST['password']));
 
 			$User->save();
 		}
