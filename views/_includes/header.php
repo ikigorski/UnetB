@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
 	<div class="container-fluid">
 		<!-- DEIXA SITE RESPONSIVO -->
 		<div class="navbar-header">

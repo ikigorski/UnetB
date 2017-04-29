@@ -47,7 +47,7 @@
 					</div>
 
 					<input type="hidden" name="acao" value="incluir">
-					<center><button type="submit" class="btn btn-default" id='botao'>Gravar</button></center>
+					<center><button type="submit" class="btn btn-primary btn-lg btn-block" id='botao'>Gravar</button></center>
 					<span class='msg-erro msg-cadastro'></span>
 
 				</form>

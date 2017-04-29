@@ -23,6 +23,7 @@
 				<h1 class="register-legend"><center><b>Login</b></center></h1>
 				<form action="login.php" method="post" id='form-contato' enctype='multipart/form-data'>
 
+					<span class="msg-erro msg-login"></span>	
 					<div class="form-group">
 						<label for="email">E-mail</label>
 						<input type="email" class="form-control" id="email" name="email" placeholder="Informe o E-mail">
@@ -36,13 +37,12 @@
 					</div>
 
 					<input type="hidden" name="acao" value="incluir">
-					<center><button type="submit" class="btn btn-default" id='botao'>Entrar</button></center>
-					<span class='msg-erro msg-cadastro'></span>
+					<center><button type="submit" class="btn btn-primary btn-lg btn-block" id='botao'>Entrar</button></center>
+					
 				</form>
 			</fieldset>
 		</div>
 	</div>
-
 
 </body>
 	<script src="_js/valida_login.js"></script>

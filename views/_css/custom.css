@@ -4,9 +4,8 @@ html, body {
 	background-color: #444444;
 	
 }
-
 /* CUSTOMIZAÇÃO DO MAPA*/
-#map{
+.map{
 	height: 100%;
 	margin-top: -51px;
 }
@@ -16,13 +15,10 @@ html, body {
 }
 /* COR DAS MEMSAGENS DE ERRO DOS FURMULÁRIOS*/
 .msg-erro{
-	color: red;
+	color: #a94442;
+ 	background-color: #f2dede;
+ 	text-align: center;
 }
-/*DIMENSÃO DO MAPA*/
-.map{
-	width: 100%;
-}
-
 /*CENTRALIZAR OBJETOS NA TELA*/
 .child.both {
 	position: absolute;

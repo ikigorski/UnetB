@@ -15,16 +15,15 @@
 
 	}else{
 		session_destroy();
-		 
+		$teste = '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Usuário ou senha inválido';		
 		include "login-view.php";
 		echo"
 			<script>
-				caixa_password = document.querySelector('.msg-password');
-				caixa_password.innerHTML = 'Usuário ou senha inválido.';
-				caixa_password.style.display = 'block';
+				caixa_login = document.querySelector('.msg-login');
+				caixa_login.innerHTML = '$teste';
+				caixa_login.style.display = 'block';
 			</script>
 		";
-		//header('location:http://localhost/UnetB/views/login-view.php');
 	}
 
 ?>
