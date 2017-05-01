@@ -39,9 +39,9 @@
 							</div>
 
 							<div class="form-group">
-								<label for="password">*Confirmar Senha</label>
-								<input type="confirm-password" class="form-control" id="password" name="confirm-password" placeholder="Digite a senha novamente">
-								<span class='msg-erro msg-password'></span>
+								<label for="confpass">*Confirmar Senha</label>
+								<input type="password" class="form-control" id="confpass" name="confpass" placeholder="Digite a senha novamente">
+								<span class='msg-erro msg-confpass'></span>
 							</div>
 
 							<div class="form-group">

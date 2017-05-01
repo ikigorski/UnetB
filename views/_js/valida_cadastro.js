@@ -20,6 +20,7 @@ function validaCadastro(evt){
 	var email = document.getElementById('email');
 	var matricula = document.getElementById('matricula');
 	var password = document.getElementById('password');
+	var confpass = document.getElementById('confpass');
 	var filtro_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 	var filtro_name = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ' ]+$/;
 	var filtro_matricula = /^[0-9 /]+$/;
@@ -51,6 +52,20 @@ function validaCadastro(evt){
 		contErro += 1;
 	}else{
 		caixa_password.style.display = 'none';
+	}
+
+	/* Confirmar senha*/
+	caixa_confpass = document.querySelector('.msg-confpass');
+	if(confpass.value == ""){
+		caixa_confpass.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Favor preencher a senha";
+		caixa_confpass.style.display = 'block';
+		contErro += 1;
+	}else if(confpass.value != password.value){
+		caixa_confpass.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Senha incorreta";
+		caixa_confpass.style.display = 'block';
+		contErro += 1;
+	}else{
+		caixa_confpass.style.display = 'none';
 	}
 
 	/* Validação do campo name */
