@@ -3,7 +3,7 @@
 	session_start();
 
 	$email = utf8_decode($_POST['email']);
-	$password = utf8_decode($_POST['password']);
+	$password = hash('sha256',utf8_decode($_POST['password']));
 
 	echo $email;
 	echo $password;
