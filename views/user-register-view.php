@@ -39,6 +39,12 @@
 							</div>
 
 							<div class="form-group">
+								<label for="password">*Confirmar Senha</label>
+								<input type="confirm-password" class="form-control" id="password" name="confirm-password" placeholder="Digite a senha novamente">
+								<span class='msg-erro msg-password'></span>
+							</div>
+
+							<div class="form-group">
 								<label for="name">Nome</label>
 								<input type="text" class="form-control" id="name" name="name" placeholder="Infome o Nome">
 								<span class='msg-erro msg-name'></span>
