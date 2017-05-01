@@ -4,36 +4,35 @@ html, body {
 	background-color: #444444;
 	
 }
-/* CUSTOMIZAÇÃO DO MAPA*/
-.map{
-	height: 100%;
-	margin-top: -51px;
-}
-/* TAMANHO DA MARGEM DE BAIXO DO HEADER*/
+/******************CUSTOMIZAÇÃO DO HEADER******************/
 .navbar{
+	border: none;
 	margin-bottom: 0px;
 }
-/* COR DAS MEMSAGENS DE ERRO DOS FURMULÁRIOS*/
+
+/******************CUSTOMIZAÇÃO DO MAPA******************/
+.map{
+	height: 100%;
+}
+/******************CUSTOMIZAÇÃO DO FORMULÁRIO******************/
+
+/*MEMSAGENS DE ERRO DOS FURMULÁRIOS*/
 .msg-erro{
 	color: #a94442;
  	background-color: #f2dede;
- 	text-align: center;
 }
-/*CENTRALIZAR OBJETOS NA TELA*/
-.child.both {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.well{
+	margin-bottom: 0px;
+	margin-top: 50px;
 }
-.child.horizontal {
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
+
+/******************CENTRALIZAR OBJETOS VERTICALMENTE NA TELA******************/
+.pai {
+	height: 100%;
+	width: 100%;
+	display: table;	
 }
-.child.vertical {
-	margin-top: 35px;
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
+.filho {
+	display: table-cell;
+	vertical-align: middle;
 }
