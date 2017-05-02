@@ -6,14 +6,6 @@ if (form.addEventListener) {
     form.attachEvent("onsubmit", validaCadastro);
 }
 
-/* Atribui ao evento keypress do input matricula a função para formatar a matricula (00/0000000) */
-var inputMatricula = document.getElementById("matricula");
-if (inputMatricula.addEventListener) {                   
-    inputMatricula.addEventListener("keypress", function(){mascaraTexto(this, '##/#######')});
-} else if (inputMatricula.attachEvent) {                  
-    inputMatricula.attachEvent("onkeypress", function(){mascaraTexto(this, '##/########')});
-}
-
 /* Função para validar os dados antes da submissão dos dados */
 function validaCadastro(evt){
 	

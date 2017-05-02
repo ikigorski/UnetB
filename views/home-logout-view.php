@@ -17,6 +17,7 @@
 		<?php include "_includes/header.php";?>
 		
 		<div id="map" class="map"></div>
+		
 
 	</body>
 	

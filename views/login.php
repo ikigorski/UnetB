@@ -18,8 +18,9 @@
 		header('location:http://localhost/UnetB/views/home-login-view.php');
 
 	}else{
-		session_destroy();
-		include "login-view.php";
+		
+		//include "login-view.php";
+		require_once 'login-view.php';
 		echo"
 			<script>
 				caixa_login = document.querySelector('.msg-login');

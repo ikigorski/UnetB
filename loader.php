@@ -8,6 +8,7 @@ session_start();
 //require_once ABSPATH . '/views/home-logout-view.php';
 header('location:views/home-logout-view.php');
 
+
 //require_once ABSPATH . '/views/home.php';
 /*
 // Verifica o modo para debugar
