@@ -12,14 +12,12 @@
 	<title>UNetB - Home</title>
 
 
-<?php
-	
+<?php	
 	session_start();
 	
 	if(!isset($_SESSION['email'])){
 		header('location:login-view.php');
 	}
-
 	include "_includes/header.php";
 	$logado = $_SESSION['email'];
 ?>
