@@ -6,11 +6,18 @@ if (form.addEventListener) {
     form.attachEvent("onsubmit", validaCadastro);
 }
 
+/* Atribui ao evento keypress do input matricula a função para formatar a matricula (00/0000000) */
+var inputMatricula = document.getElementById("matricula");
+if (inputMatricula.addEventListener) {                   
+    inputMatricula.addEventListener("keypress", function(){mascaraTexto(this, '##/#######')});
+} else if (inputMatricula.attachEvent) {                  
+    inputMatricula.attachEvent("onkeypress", function(){mascaraTexto(this, '##/########')});
+}
+
 /* Função para validar os dados antes da submissão dos dados */
 function validaCadastro(evt){
 	
 	var email = document.getElementById('email');
-	var login = document.getElementById('login');
 	var password = document.getElementById('password');
 	var filtro_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 	var contErro = 0;
@@ -18,12 +25,10 @@ function validaCadastro(evt){
 	/* Validação do campo email */
 	caixa_email = document.querySelector('.msg-email');
 	if(email.value == ""){
-		caixa_email.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Favor preencher o E-mail";
-		caixa_email.style.display = 'block';
+		formataErro(caixa_email," Favor preencher o E-mail.");
 		contErro += 1;
 	}else if(!filtro_email.test(email.value)){
-		caixa_email.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> E-mail no formato inválido";
-		caixa_email.style.display = 'block';
+		formataErro(caixa_email," E-mail no formato inválido.");
 		contErro += 1;
 	}else{
 		caixa_email.style.display = 'none';
@@ -32,12 +37,10 @@ function validaCadastro(evt){
 	/* Validação do campo password*/
 	caixa_password = document.querySelector('.msg-password');
 	if(password.value == ""){
-		caixa_password.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Favor preencher a senha";
-		caixa_password.style.display = 'block';
+		formataErro(caixa_password," Favor preencher a senha.");
 		contErro += 1;
 	}else if(password.value.length < 6){
-		caixa_password.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Senha deve ter no mínimo 6 caracteres";
-		caixa_password.style.display = 'block';
+		formataErro(caixa_password," Senha deve ter no mínimo 6 caracteres.");
 		contErro += 1;
 	}else{
 		caixa_password.style.display = 'none';
@@ -45,7 +48,17 @@ function validaCadastro(evt){
 	
 	caixa_login = document.querySelector('.msg-login');
 	caixa_login.style.display = 'none';
+	
 	if(contErro > 0){
 		evt.preventDefault();
 	}
+}
+
+/* Função para formatar as mansagens de erro*/
+function formataErro(elemento,texto){
+	elemento.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>" + texto;
+	elemento.style.padding ="5px";
+	elemento.style.border ='1px solid #ebccd1';
+	elemento.style.display = 'block';
+	elemento.style.borderRadius = '4px';
 }

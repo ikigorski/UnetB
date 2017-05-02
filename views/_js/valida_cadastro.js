@@ -29,12 +29,10 @@ function validaCadastro(evt){
 	/* Validação do campo email */
 	caixa_email = document.querySelector('.msg-email');
 	if(email.value == ""){
-		caixa_email.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Favor preencher o E-mail";
-		caixa_email.style.display = 'block';
+		formataErro(caixa_email," Favor preencher o E-mail.");
 		contErro += 1;
 	}else if(!filtro_email.test(email.value)){
-		caixa_email.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> E-mail no formato inválido";
-		caixa_email.style.display = 'block';
+		formataErro(caixa_email," E-mail no formato inválido.");
 		contErro += 1;
 	}else{
 		caixa_email.style.display = 'none';
@@ -43,12 +41,10 @@ function validaCadastro(evt){
 	/* Validação do campo password*/
 	caixa_password = document.querySelector('.msg-password');
 	if(password.value == ""){
-		caixa_password.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Favor preencher a senha";
-		caixa_password.style.display = 'block';
+		formataErro(caixa_password," Favor preencher a senha.");
 		contErro += 1;
 	}else if(password.value.length < 6){
-		caixa_password.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Senha deve ter no mínimo 6 caracteres";
-		caixa_password.style.display = 'block';
+		formataErro(caixa_password," Senha deve ter no mínimo 6 caracteres.");
 		contErro += 1;
 	}else{
 		caixa_password.style.display = 'none';
@@ -57,12 +53,10 @@ function validaCadastro(evt){
 	/* Confirmar senha*/
 	caixa_confpass = document.querySelector('.msg-confpass');
 	if(confpass.value == ""){
-		caixa_confpass.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Favor preencher a senha";
-		caixa_confpass.style.display = 'block';
+		formataErro(caixa_confpass," Favor preencher a confirmação de senha.");
 		contErro += 1;
 	}else if(confpass.value != password.value){
-		caixa_confpass.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Senha incorreta";
-		caixa_confpass.style.display = 'block';
+		formataErro(caixa_confpass," As senhas são diferentes.");
 		contErro += 1;
 	}else{
 		caixa_confpass.style.display = 'none';
@@ -73,11 +67,10 @@ function validaCadastro(evt){
 	caixa_name.style.display = 'none';
 	if(name.value.length != 0){
 		if(name.value.length < 3){
-			caixa_name.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> O nome deve conter no mínimo 3 letras";
-			caixa_name.style.display = 'block';
+			formataErro(caixa_name," O nome deve conter no mínimo 3 letras.");
 			contErro += 1;
 		}else if(!filtro_name.test(name.value)){
-			caixa_name.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> O nome deve conter apenas letras";
+			formataErro(caixa_name," O nome deve conter apenas letras.");
 			caixa_name.style.display = 'block';
 			contErro += 1;
 		}else{
@@ -90,12 +83,10 @@ function validaCadastro(evt){
 	caixa_matricula.style.display = 'none';	
 	if(matricula.value.length != 0){
 		if(matricula.value.length != 10){
-			caixa_matricula.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Favor preencher a Matrícula por completo";
-			caixa_matricula.style.display = 'block';
+			formataErro(caixa_matricula," Favor preencher a Matrícula por completo.");
 			contErro += 1;
 		}else if(!filtro_matricula.test(matricula.value)){
-			caixa_matricula.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span> Favor preencher a Matrícula usando apenas números";
-			caixa_matricula.style.display = 'block';
+			formataErro(caixa_matricula," Favor preencher a Matrícula usando apenas números.");
 			contErro += 1;
 		}else{
 			caixa_matricula.style.display = 'none';
@@ -117,4 +108,12 @@ function mascaraTexto(t, mask){
 	if (texto.substring(0,1) != saida){
 		t.value += texto.substring(0,1);
 	}
+}
+/* Função para formatar as mansagens de erro*/
+function formataErro(elemento,texto){
+	elemento.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>" + texto;
+	elemento.style.padding ="5px";
+	elemento.style.border ='1px solid #ebccd1';
+	elemento.style.display = 'block';
+	elemento.style.borderRadius = '4px';
 }

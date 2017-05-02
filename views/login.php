@@ -19,13 +19,11 @@
 
 	}else{
 		session_destroy();
-		$teste = '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Usuário ou senha inválido';		
 		include "login-view.php";
 		echo"
 			<script>
 				caixa_login = document.querySelector('.msg-login');
-				caixa_login.innerHTML = '$teste';
-				caixa_login.style.display = 'block';
+				formataErro(caixa_login,' Usuário ou senha inválido.');
 			</script>
 		";
 	}
