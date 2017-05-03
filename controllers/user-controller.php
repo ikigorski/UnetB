@@ -41,11 +41,12 @@
 		$UserControl->registeruser();
 		mysqli_close($con);
 		echo "Cadastro realizado com sucesso";
+		// Se a sessão não existir, inicia uma
+		if (!isset($_SESSION)) session_start();
+		$_SESSION['email'] = $email;
+		$_SESSION['nome'] = $name;
+		header('location:../views/home-login-view.php');
+
 	}
-	
-	
-	
-	
-	//header('location:../home-login-view.php');
 
 ?>
