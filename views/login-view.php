@@ -22,7 +22,7 @@
 					<div class="row">					
 						<div class= "well col-md-4 col-sm-6 col-xs-12 col-md-offset-4 col-sm-offset-3">
 							
-							<center><h1>Login</h1></center>
+							<center><h1 class="title-form">Login</h1></center>
 							
 							<form action="login.php" method="post" id='form-contato' enctype='multipart/form-data'>
 

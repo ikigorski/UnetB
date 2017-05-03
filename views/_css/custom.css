@@ -22,11 +22,17 @@ html, body {
 	color: #a94442;
  	background-color: #f2dede;
 }
+/*CONTEUDO DO FURMULÁRIO*/
 .well{
 	margin-bottom: 0px;
 	margin-top: 50px;
+	border-color: #d6d6d6;
+	background-color: #e0e0e0;
 }
-
+/*TÍTULO DO FURMULÁRIO*/
+.title-form{
+	margin-top: 0px;
+}
 /******************CENTRALIZAR OBJETOS VERTICALMENTE NA TELA******************/
 .pai {
 	height: 100%;

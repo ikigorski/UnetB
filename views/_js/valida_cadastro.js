@@ -6,24 +6,14 @@ if (form.addEventListener) {
     form.attachEvent("onsubmit", validaCadastro);
 }
 
-/* Atribui ao evento keypress do input matricula a função para formatar a matricula (00/0000000) */
-var inputMatricula = document.getElementById("matricula");
-if (inputMatricula.addEventListener) {                   
-    inputMatricula.addEventListener("keypress", function(){mascaraTexto(this, '##/#######')});
-} else if (inputMatricula.attachEvent) {                  
-    inputMatricula.attachEvent("onkeypress", function(){mascaraTexto(this, '##/########')});
-}
-
 /* Função para validar os dados antes da submissão dos dados */
 function validaCadastro(evt){
 	var name = document.getElementById('name');
 	var email = document.getElementById('email');
-	var matricula = document.getElementById('matricula');
 	var password = document.getElementById('password');
 	var confpass = document.getElementById('confpass');
 	var filtro_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 	var filtro_name = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ' ]+$/;
-	var filtro_matricula = /^[0-9 /]+$/;
 	var contErro = 0;
 
 	/* Validação do campo email */
@@ -78,37 +68,10 @@ function validaCadastro(evt){
 		}
 	}
 
-	/* Validação do campo Matrícula*/
-	caixa_matricula = document.querySelector('.msg-matricula');
-	caixa_matricula.style.display = 'none';	
-	if(matricula.value.length != 0){
-		if(matricula.value.length != 10){
-			formataErro(caixa_matricula," Favor preencher a Matrícula por completo.");
-			contErro += 1;
-		}else if(!filtro_matricula.test(matricula.value)){
-			formataErro(caixa_matricula," Favor preencher a Matrícula usando apenas números.");
-			contErro += 1;
-		}else{
-			caixa_matricula.style.display = 'none';
-		}
-	}
-
-
 	if(contErro > 0){
 		evt.preventDefault();
 	}
-}
-
-/* Função para formatar dados conforme parâmetro enviado*/
-function mascaraTexto(t, mask){
-	var i = t.value.length;
-	var saida = mask.substring(1,0);
-	var texto = mask.substring(i);
-
-	if (texto.substring(0,1) != saida){
-		t.value += texto.substring(0,1);
-	}
-}
+}		
 /* Função para formatar as mansagens de erro*/
 function formataErro(elemento,texto){
 	elemento.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>" + texto;

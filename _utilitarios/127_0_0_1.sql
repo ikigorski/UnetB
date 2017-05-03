@@ -20,7 +20,6 @@ CREATE TABLE IF NOT EXISTS `unetb`.`user` (
   `user_id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) COLLATE utf8_bin DEFAULT NULL,
   `email` VARCHAR(255) COLLATE utf8_bin NOT NULL,
-  `matricula` VARCHAR(10) COLLATE utf8_bin DEFAULT NULL,
   `password` TEXT COLLATE utf8_bin DEFAULT NULL,
    PRIMARY KEY (`user_id`),
    UNIQUE (email)

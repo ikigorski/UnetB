@@ -22,7 +22,7 @@
 					<div class="row">
 						<div class= "well col-md-4 col-sm-6 col-xs-12 col-md-offset-4 col-sm-offset-3">
 							
-							<center><h1>Cadastro</h1></center>
+							<center><h1 class="title-form">Cadastro</h1></center>
 							
 							<form action="../controllers/user-controller.php" method="post" id='form-contato' enctype='multipart/form-data'>
 
@@ -48,12 +48,6 @@
 									<label for="name">Nome</label>
 									<input type="text" class="form-control" id="name" name="name" placeholder="Infome o Nome">
 									<span class='msg-erro msg-name'></span>
-								</div>
-
-								<div class="form-group">
-									<label for="matricula">Matrícula</label>
-									<input type="matricula" class="form-control" id="matricula" name="matricula" placeholder="Informe a Matrícula" maxlength = "10">
-									<span class='msg-erro msg-matricula'></span>
 								</div>
 
 								<input type="hidden" name="acao" value="incluir">
