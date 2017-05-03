@@ -1,10 +1,8 @@
 <?php	
-	session_start();
-	
+	if (!isset($_SESSION)) session_start();
 	if(!isset($_SESSION['email'])){
 		header('location:login-view.php');
 	}
-	$logado = $_SESSION['email'];
 ?>
 
 
@@ -28,7 +26,7 @@
 		<?php include "_includes/header-logado.php";?>
 
 		<div class="container">
-			<h3 style="margin-top: 50px;"><?php echo" Bem vindo $logado";?></h3>
+			<h3 style="margin-top: 50px;">Bem Vindo(a) <?php echo $_SESSION['nome'];?></h3>
 		</div>
 
 	</body>
