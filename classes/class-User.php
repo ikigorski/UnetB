@@ -1,6 +1,6 @@
 <?php
 
-class User {
+class User{
 	
 	private $name;
 	private $email;
@@ -47,16 +47,10 @@ class User {
 		$this->password = $password;
 	}
 	
-	public function save()
-	{
-
-		$con = mysqli_connect("127.0.0.1", "root", "", "unetb");
-
-		mysqli_query($con,"INSERT INTO user (name, email, matricula, password) 
-							VALUES ('{$this->name}','{$this->email}','{$this->matricula}','{$this->password}')
-					");	
-
-		mysqli_close($con);
+	public function save(){
+		
+		global $con;
+		$teste = mysqli_query($con,"INSERT INTO user (name, email, matricula, password) VALUES ('{$this->name}','{$this->email}','{$this->matricula}','{$this->password}')");
 	}
 }
 ?>

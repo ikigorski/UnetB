@@ -49,8 +49,8 @@ function validaCadastro(evt){
 /* Função para formatar as mansagens de erro*/
 function formataErro(elemento,texto){
 	elemento.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>" + texto;
-	elemento.style.padding ="5px";
+	elemento.style.padding ="2px";
 	elemento.style.border ='1px solid #ebccd1';
 	elemento.style.display = 'block';
-	elemento.style.borderRadius = '4px';
+	elemento.style.borderRadius = '10px';
 }
