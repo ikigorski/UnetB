@@ -16,19 +16,13 @@
 	
 		//Esta função faz a conexão com o Banco de Dados
 		function connect(){
-			$this->condb=mysqli_connect($this->host,$this->user,$this->password);
-			
-			if(!$this->con){
 
-				echo "Falha na conexão com o Banco de Dados!<br/>";
-				echo "Erro: " . mysqli_error();
-				die();
-			
-			}elseif(!mysqli_select_db($this->database, $this->condb)){
-				echo "O Bando de Dados solicitado não pode ser aberto!<br />";
-				echo "Erro: " . mysqli_error();
-				die();
-			}
+			$this->condb=mysqli_connect($this->host,$this->user,$this->password,$this->database);
+				
+			if(!$this->condb){
+				echo "Falha na conexão com o Banco de Dados!" . PHP_EOL;
+				exit;
+			}			
 		}
 
 		//Esta função executa uma Query
@@ -36,16 +30,13 @@
 			$this->connect();
 			$this->query=$query;
 
-			if($this->result=mysqli_query($this->query)){
-				$this->disconnect(); 
+			if($this->result=mysqli_query($this->condb,$this->query)){
+				
 				return $this->result;
 
-			}else{
-				echo "Ocorreu um erro na execução da SQL";
-				echo "Erro :" . mysqli_error();
-				echo "SQL: " . $query;
-				die();
-				disconnect();
+			}else{				
+				echo "Falha na conexão com o Banco de Dados! teste" . PHP_EOL;
+				exit;
 			}
 		}
 
