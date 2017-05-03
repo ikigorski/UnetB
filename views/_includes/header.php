@@ -9,7 +9,7 @@
 			</button>
 
 			<a class="navbar-brand" href="home-logout-view.php">UnetB <span class="glyphicon glyphicon-signal">
-				<!--img alt="Brand" src="_images/logo.png" style="margin-top: -25px"-->
+				<!-- <img alt="Brand" src="_images/logounetb.png" style="margin-top: -25px"> -->
 			</a>
 		</div>
 		
