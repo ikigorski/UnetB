@@ -13,7 +13,7 @@
 	$password = hash('sha256',utf8_decode($_POST['password']));
 
 	// Validação do usuário/senha digitados
-	$sql = "SELECT `email`, `password` FROM `user` WHERE (`email` = '". $email ."') AND (`password` = '". $password ."') LIMIT 1";
+	$sql = "SELECT `name`,`email`, `password` FROM `user` WHERE (`email` = '". $email ."') AND (`password` = '". $password ."') LIMIT 1";
 	$query = mysqli_query($con,$sql);
 	
 	if (mysqli_num_rows($query) != 1) {
@@ -30,7 +30,7 @@
 	  	// Salva os dados encontados na variável $resultado
 		$resultado = mysqli_fetch_assoc($query);
 
-
+		var_dump($resultado);
 		// Se a sessão não existir, inicia uma
 		if (!isset($_SESSION)) session_start();
 		$_SESSION['email'] = $resultado['email'];
