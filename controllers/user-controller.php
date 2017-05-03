@@ -42,10 +42,5 @@
 		mysqli_close($con);
 		echo "Cadastro realizado com sucesso";
 	}
-	
-	
-	
-	
-	//header('location:../home-login-view.php');
 
 ?>

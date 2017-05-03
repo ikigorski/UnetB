@@ -26,7 +26,7 @@
 		<?php include "_includes/header-logado.php";?>
 
 		<div class="container">
-			<h3 style="margin-top: 50px;">Bem Vindo(a) <?php echo $_SESSION['nome'];?></h3>
+			<h3 style="margin-top: 50px;">Bem Vindo(a) <?php echo utf8_decode($_SESSION['nome']);?></h3>
 		</div>
 
 	</body>
