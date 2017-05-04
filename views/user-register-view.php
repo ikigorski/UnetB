@@ -24,7 +24,7 @@
 							
 							<center><h1 class="title-form">Cadastro</h1></center>
 							
-							<form action="../controllers/user-controller.php" method="post" id='form-contato' enctype='multipart/form-data'>
+							<form action="../controllers/register-controller.php" method="post" id='form-contato' enctype='multipart/form-data'>
 
 								<div class="form-group">
 									<label for="email">*E-mail</label>

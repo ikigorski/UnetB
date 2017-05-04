@@ -20,7 +20,7 @@
 			$this->condb=mysqli_connect($this->host,$this->user,$this->password,$this->database);
 				
 			if(!$this->condb){
-				echo "Falha na conexão com o Banco de Dados!" . PHP_EOL;
+				echo "Falha na conexão com o Banco de Dados!";
 				exit;
 			}			
 		}
@@ -35,7 +35,7 @@
 				return $this->result;
 
 			}else{				
-				echo "Falha na conexão com o Banco de Dados! teste" . PHP_EOL;
+				return false;
 				exit;
 			}
 		}

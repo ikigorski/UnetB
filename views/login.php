@@ -11,7 +11,6 @@
 
 	//Inclue as classes para conexão com o Banco de Dados e controle de usuário
 	require_once "../classes/class-UnetbDB.php";
-    require_once "../controllers/user-controller.php";
 	$user = new UserControl();
 
 	//Conecta ao bando de dados
