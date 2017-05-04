@@ -1,8 +1,9 @@
 <?php
 
-	$name = utf8_decode($_POST['name']);
-	$email = utf8_decode($_POST['email']);
+	$name     = utf8_decode($_POST['name']);
+	$email    = utf8_decode($_POST['email']);
 	$password = utf8_decode($_POST['password']);
+
 
 	//Carrega arquivos necessários para funcionamento
 	require_once "../classes/class-UnetbDB.php"; //arquivo para a classe que conecta ao banco de dados

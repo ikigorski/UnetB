@@ -24,7 +24,7 @@
 							
 							<center><h1 class="title-form">Login</h1></center>
 							
-							<form action="login.php" method="post" id='form-contato' enctype='multipart/form-data'>
+							<form action="../controllers/login-controller.php" method="post" id='form-contato' enctype='multipart/form-data'>
 
 								<div class="form-group">
 									<label for="email">E-mail</label>
