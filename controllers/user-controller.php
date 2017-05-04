@@ -2,7 +2,7 @@
 
 	$name = utf8_decode($_POST['name']);
 	$email = utf8_decode($_POST['email']);
-	$password = hash('sha256', utf8_decode($_POST['password']));
+	$password = utf8_decode($_POST['password']);
 
 	$con = mysqli_connect("127.0.0.1", "root", "", "unetb") or die ("Sem conexão com o servidor");
 	
@@ -10,10 +10,23 @@
 
 	class UserControl {
 
+    	 function b_hash ($password) /* função geradora de HASH para as senhas */
+			{
+				if (defined("CRYPT_BLOWFISH") && CRYPT_BLOWFISH) 
+	 			  {
+					$salt = '$2y$11$' . substr(md5(uniqid(rand(), true)), 0, 22);
+					return crypt($password, $salt);
+	   		          }
+			}
+
+	function verify($password, $hashedPassword) {
+    		return crypt($password, $hashedPassword) == $hashedPassword;
+			}
+
 		public function registeruser(){
 		
 			global $name, $email, $password;
-			$User = new User($name, $email, $password);
+			$User = new User($name, $email, b_hash($password));
 
 			$User->save();			
 		}
