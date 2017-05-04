@@ -9,29 +9,23 @@
 	$email = utf8_decode($_POST['email']);
 	$password = utf8_decode($_POST['password']);
 
-	//Inclue a classe para conexão com o Banco de Dados
+	//Inclue as classes para conexão com o Banco de Dados e controle de usuário
 	require_once "../classes/class-UnetbDB.php";
-        require_once "../controllers/user-controller.php";
+    require_once "../controllers/user-controller.php";
 	$user = new UserControl();
 
 	//Conecta ao bando de dados
-	$mySQL = new MySQL;
+	$mySQL = new MySQL; // como está sendo feita a conexão ? mysqli_connect é executado quando se cria um obj MySQL?
 
-	
-	$executaQuery_hash = $mySQL->executeQuery("SELECT * FROM `user` WHERE (`email` = '". $email ."') LIMIT 1");
-                 
-        $userhash = mysqli_fetch_assoc($executaQuery_hash);
-	$varhash = $userhash['name'];
-	if($user->verify($password, $varhash) = 1){
 
-	//$executaQuery = $mySQL->executeQuery("SELECT * FROM `user` WHERE (`email` = '". $email ."') AND (`password` = '".$password ."') LIMIT 1");
-	//$totalRows = mysqli_num_rows($executaQuery);	
+	// não seria melhor selecionar apenas email e senha ao invés de selecionar tudo da tabela?
+	$executaQuery = $mySQL->executeQuery("SELECT * FROM `user` WHERE (`email` = '". $email ."') LIMIT 1"); //selecionando * (all) da tabela e conferindo o email
+	$totalRows = mysqli_num_rows($executaQuery); //variável para armazenar o número de linha(s)	
 	$mySQL->disconnect();
-
-
+	$resultado = mysqli_fetch_assoc($executaQuery);// Salva os dados encontados na variável $resultado
 	
-	//if ($totalRows != 1) {
-	// Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
+	if ($totalRows And $user->verify($password ,$resultado['password'])!= 1) {
+	// Mensagem de erro quando a senha é inválida e/ou o usuário não foi encontrado  
 		require_once 'login-view.php';
 		echo"
 			<script>
@@ -39,11 +33,9 @@
 				formataErro(caixa_login,' Usuário ou senha inválido.');
 			</script>
 		";
-	//} else {
+	} else {
+	
 		echo "Conectado";
-		// Salva os dados encontados na variável $resultado
-		$resultado = mysqli_fetch_assoc($executaQuery);
-		
 		// Se a sessão não existir, inicia uma
 		if (!isset($_SESSION)) session_start();
 		$_SESSION['email'] = $resultado['email'];
