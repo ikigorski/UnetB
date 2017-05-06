@@ -110,5 +110,6 @@ if(url == "?email"){
 }else if(url == "?success"){
 	caixa_cadastro = document.querySelector('.msg-cadastro');
 	formataSuccess(caixa_cadastro,' Cadastro realizado com sucesso.');
+	window.setTimeout("location.href='login-view.php'",4000);
 
 }

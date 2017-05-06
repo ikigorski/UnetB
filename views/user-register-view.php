@@ -44,7 +44,7 @@
 								</div>
 
 								<input type="hidden" name="acao" value="incluir">
-								<button type="submit" class="btn btn-primary btn-lg btn-block" id='botao'>Gravar</button>
+								<button type="submit" class="btn btn-primary btn-lg btn-block" id='botao'>Gravar</button><br/>
 								<span class='msg-erro msg-cadastro'></span>
 
 							</form><!-- /formulário-->
