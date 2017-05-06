@@ -49,8 +49,16 @@ function validaCadastro(evt){
 /* Função para formatar as mansagens de erro*/
 function formataErro(elemento,texto){
 	elemento.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>" + texto;
+	elemento.style.color = '#a94442';
+	elemento.style.backgroundColor = '#f2dede';
 	elemento.style.padding ="2px";
 	elemento.style.border ='1px solid #ebccd1';
 	elemento.style.display = 'block';
-	elemento.style.borderRadius = '10px';
+}
+
+var url = window.location.search;
+if(url == "?failed"){
+	caixa_login = document.querySelector('.msg-login');
+	formataErro(caixa_login,' Usuário ou senha inválido.');
+	window.history.pushState("http://localhost/UnetB/views/login-view.php");
 }

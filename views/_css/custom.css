@@ -17,11 +17,6 @@ html, body {
 }
 /******************CUSTOMIZAÇÃO DO FORMULÁRIO******************/
 
-/*MEMSAGENS DE ERRO DOS FURMULÁRIOS*/
-.msg-erro{
-	color: #a94442;
- 	background-color: #f2dede;
-}
 /*CONTEUDO DO FURMULÁRIO*/
 .well{
 	margin-bottom: 0px;

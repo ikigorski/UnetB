@@ -9,26 +9,28 @@
 	$password = utf8_decode($_POST['password']);
 
 
-	require_once "../classes/class-UnetbDB.php"; //arquivo para a classe que conecta ao banco de dados
-	require_once "../functions/hash.php";		 //arquivos para gerar o hash para a senha
+	require_once "../classes/class-UnetbDB.php";   //arquivo para a classe que conecta ao banco de dados
+	require_once "../functions/hash.php";		   //arquivos para gerar o hash para a senha
 
 
 	//Conecta ao bando de dados
 	$mySQL = new MySQL;
-
-	$query = "SELECT * FROM `user` WHERE (`email` = '". $email ."') LIMIT 1";
-	
-	$executaQuery = $mySQL->executeQuery($query); //selecionando * (all) da tabela e conferindo o email
-	
-	$totalRows = mysqli_num_rows($executaQuery); //variável para armazenar o número de linha(s)
-	
-	$mySQL->disconnect();
-	
+	$query = "SELECT * FROM `user` WHERE (`email` = '". $email ."') LIMIT 1";	
+	$executaQuery = $mySQL->executeQuery($query); //selecionando * (all) da tabela e conferindo o email	
+	$totalRows = mysqli_num_rows($executaQuery); //variável para armazenar o número de linha(s)	
+	$mySQL->disconnect();	
 	$resultado = mysqli_fetch_assoc($executaQuery);// Salva os dados encontados na variável $resultado
 
+	
 	if ($totalRows == 1 && verify($password ,$resultado['password']) == 1){
-		echo "Conectado";
+		
+		if (!isset($_SESSION)) session_start();
+		$_SESSION['email'] = $resultado['email'];
+		$_SESSION['nome'] = $resultado['name'];
+		
+		header('location:http://localhost/UnetB/views/home-login-view.php');
+
 	}else{
-		echo "Usuário ou senha inválido";
+		echo "<script>location.href='../views/login-view.php?failed';</script>";			
 	}
 ?>

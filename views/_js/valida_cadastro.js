@@ -68,6 +68,9 @@ function validaCadastro(evt){
 		}
 	}
 
+	caixa_cadastro = document.querySelector('.msg-cadastro');
+	caixa_cadastro.style.display = 'none';
+
 	if(contErro > 0){
 		evt.preventDefault();
 	}
@@ -75,8 +78,37 @@ function validaCadastro(evt){
 /* Função para formatar as mansagens de erro*/
 function formataErro(elemento,texto){
 	elemento.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>" + texto;
+	elemento.style.color = '#a94442';
+	elemento.style.backgroundColor = '#f2dede';
 	elemento.style.padding ="2px";
 	elemento.style.border ='1px solid #ebccd1';
 	elemento.style.display = 'block';
 	elemento.style.borderRadius = '10px';
+}
+
+/* Função para formatar as mansagens de sucesso*/
+function formataSuccess(elemento,texto){
+	elemento.innerHTML = "<span class='glyphicon glyphicon glyphicon-ok' aria-hidden='true'></span>" + texto;
+	elemento.style.color = '#3c763d';
+	elemento.style.backgroundColor = '#dff0d8';
+	elemento.style.padding ="2px";
+	elemento.style.border ='1px solid #d6e9c6';
+	elemento.style.display = 'block';
+	elemento.style.borderRadius = '10px';
+}
+
+var url = window.location.search;
+
+if(url == "?email"){	
+	caixa_cadastro = document.querySelector('.msg-cadastro');
+	formataErro(caixa_cadastro,' E-mail já cadastrado.');
+
+}else if(url == "?error"){
+	caixa_cadastro = document.querySelector('.msg-cadastro');
+	formataErro(caixa_cadastro,' Erro interno ao realizar o cadastro.');
+
+}else if(url == "?success"){
+	caixa_cadastro = document.querySelector('.msg-cadastro');
+	formataSuccess(caixa_cadastro,' Cadastro realizado com sucesso.');
+
 }

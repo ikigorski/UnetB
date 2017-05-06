@@ -38,22 +38,23 @@
 	}
 
 	if(check_on_database($email, "email")){
-		echo "Email Já existe";
+		
 		$mySQL->disconnect();
+		echo "<script>location.href='../views/user-register-view.php?email';</script>";
 	}
 	else{
 
 		$UserControl = new UserControl();
 		if($UserControl->registeruser()){
-			echo "Cadastro realizado com sucesso";
+			
 			// Se a sessão não existir, inicia uma
 			//if (!isset($_SESSION)) session_start();
 			//$_SESSION['email'] = $email;
 			//$_SESSION['nome'] = $name;
 			//header('location:../views/home-login-view.php');
-
+			echo "<script>location.href='../views/user-register-view.php?success';</script>";
 		}else{
-			echo "O cadastro não foi realizado por problemas internos";
+			echo "<script>location.href='../views/user-register-view.php?error';</script>";
 		}
 		
 		$mySQL->disconnect();
