@@ -83,7 +83,7 @@ function formataErro(elemento,texto){
 	elemento.style.padding ="2px";
 	elemento.style.border ='1px solid #ebccd1';
 	elemento.style.display = 'block';
-	elemento.style.borderRadius = '10px';
+	
 }
 
 /* Função para formatar as mansagens de sucesso*/
@@ -94,7 +94,7 @@ function formataSuccess(elemento,texto){
 	elemento.style.padding ="2px";
 	elemento.style.border ='1px solid #d6e9c6';
 	elemento.style.display = 'block';
-	elemento.style.borderRadius = '10px';
+	
 }
 
 var url = window.location.search;
