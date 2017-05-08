@@ -69,13 +69,13 @@ function staticts($speed_vector)
 {
 	$sum = 0;
 	//fazer um vetor com todas as velocidades para ver a media	
-	for($i = 0; $i < 10 ; $i++)
+	for($i = 0; $i < 750 ; $i++)
 	{
 		
 		$sum_vec[$i] = $speed_vector[$i] + $speed_vector[$i++];
 		$sum = $sum + $sum_vec[$i];		
 	}
-	$media = $sum/10;
+	$media = $sum/750;
 	echo $media;
 }
 
