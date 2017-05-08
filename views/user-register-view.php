@@ -27,7 +27,7 @@
 
 								<div class="form-group">
 									<label for="password">*Senha</label>
-									<input type="password" class="form-control" id="password" name="password" placeholder="Infome a Senha">
+									<input type="password" class="form-control" id="password" name="password" placeholder="Informe a Senha">
 									<span class='msg-erro msg-password'></span>
 								</div>
 
@@ -39,7 +39,7 @@
 
 								<div class="form-group">
 									<label for="name">Nome</label>
-									<input type="text" class="form-control" id="name" name="name" placeholder="Infome o Nome">
+									<input type="text" class="form-control" id="name" name="name" placeholder="Informe o Nome">
 									<span class='msg-erro msg-name'></span>
 								</div>
 
