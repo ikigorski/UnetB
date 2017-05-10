@@ -14,10 +14,10 @@ function pingDomain($domain){
     }
     return $status . ' ms';
 }
-
+$max_reps = 100;
 $pings = array (); //criando um array para armazenar os resultados de pingDomain
 
-for ( $i = 0; $i < 100; $i++) //laço for para preencher o array com 100 pings
+for ( $i = 0; $i < $max_reps; $i++) //laço for para preencher o array com 100 pings
 {
    $pings[$i] = pingDomain("www.google.com"); // pingando um domínio qualquer
 }
@@ -30,19 +30,20 @@ echo $media . ' ms <br>';
 
 $jitter = array();
 
-for($i = 0; $i < 100; $i++)
+for($i = 0; $i < $max_reps; $i++)
 {
-	$valor_ping = number_format(floatval($pings[$i])); //Tentando transformar os numeros de string para floats
+    $valor_ping = number_format(floatval($pings[$i])); //Tentando transformar os numeros de string para floats
 
     $num = pow(($valor_ping - $media) , 2); //calculando um dos termos da variancia
 
-	$jitter[$i] = floor($num); //atribuindo ao array na posicao i o valor da variancia
+    $jitter[$i] = floor($num); //atribuindo ao array na posicao i o valor da variancia
 }
 
-$jitter_total = sqrt(array_sum($jitter) / 100);//tirando raiz da soma de variancias dividida pelo numero de termos somados -- vulgo calculando desvio padrao = jitter
+$jitter_total = sqrt(array_sum($jitter) / $max_reps);//tirando raiz da soma de variancias dividida pelo numero de termos somados -- vulgo calculando desvio padrao = jitter
 
 echo 'Jitter: ';
 echo number_format($jitter_total, 3);
                                    
 ?>
+
 
