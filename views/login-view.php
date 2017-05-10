@@ -27,7 +27,7 @@
 
 								<div class="form-group">
 									<label for="password">Senha</label>
-									<input type="password" class="form-control" id="password" name="password" placeholder="Infome a Senha">
+									<input type="password" class="form-control" id="password" name="password" placeholder="Informe a Senha">
 									<span class='msg-erro msg-password'></span>
 								</div>
 
