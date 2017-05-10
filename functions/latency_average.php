@@ -42,7 +42,7 @@ for($i = 0; $i < 100; $i++)
 $jitter_total = sqrt(array_sum($jitter) / 100);//tirando raiz da soma de variancias dividida pelo numero de termos somados -- vulgo calculando desvio padrao = jitter
 
 echo 'Jitter: ';
-echo round($jitter_total) . '<br>';
+echo number_format($jitter_total, 3);
 
 ?>
 
