@@ -24,7 +24,7 @@ for ( $i = 0; $i < 100; $i++) //laço for para preencher o array com 100 pings
 
 $media  = array_sum ($pings) / sizeof($pings); //aqui somamos todos os pings e dividimos pela quantidade de pings (tamanho do array)
 echo 'Latência: ';
-echo $media ' ms'. '<br>';
+echo $media . ' ms <br>';
 
 //CALCULANDO JITTER(desvio padrao da latencia)
 
@@ -43,6 +43,6 @@ $jitter_total = sqrt(array_sum($jitter) / 100);//tirando raiz da soma de varianc
 
 echo 'Jitter: ';
 echo number_format($jitter_total, 3);
-
+                                   
 ?>
 
