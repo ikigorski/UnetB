@@ -3,8 +3,8 @@
 	
 	$time_start= microtime(true);
 
-	$conteudo=file_get_contents('archives_connectionspeed/800Kb.txt');
-	$tamanho_KB= (strlen($conteudo)/1024);
+	$conteudo=file_get_contents('archives_connectionspeed/100Kb.txt');
+	$tamanho_KB= strlen($conteudo)/1024;
 
 	$time_end = microtime(true);
 	
@@ -15,8 +15,8 @@
 	
 
 	
-	echo 'Sua velocidade de conexão é de: '.$velocidade.' Kbps 
-	 <br> Foram enviados: '.$tamanho_KB.' Kb 
-	 <br> Tempo utilizado: '.$tempo_utilizado.' Segundos 
+	echo 'Sua velocidade de conexão é de: '.$velocidade.' Kbps <br> 
+		  Foram enviados: '.$tamanho_KB.' Kb <br> 
+		  Tempo utilizado: '.$tempo_utilizado.' Segundos 
 	 <hr>';
 ?>

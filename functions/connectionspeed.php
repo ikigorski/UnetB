@@ -1,37 +1,40 @@
 <?php
 
 //main
-$files = array('100Kb.txt', '200Kb.txt','400Kb.txt', '800Kb.txt', '1Mb.txt', '2Mb.txt', '10Mb.txt', '20Mb.txt',);
-$tamanho = count($files);
-
+set_time_limit(0);
 send_archives_multiples_times();
 
-//funçoes
 
 function send_archives_multiples_times(){
 
-	global $files, $tamanho;
+	$files = array('100Kb.txt', '200Kb.txt','400Kb.txt', '800Kb.txt', '1Mb.txt', '2Mb.txt', '10Mb.txt', '20Mb.txt');
 
 	$speed_vector = array();
-	$sh = create_socket();
+	$size_vector  = array();
+	$socket = create_socket();
 	
-	for($i = 0; $i < $tamanho ; $i++){
+	for($i = 0; $i < count($files) ; $i++){
 		
 		$get_speed = array();
-		$get_speed = send_archive($files[$i], $sh);
-		$speed = $get_speed[1];
+		$get_size  = array();
+
+		$get_size_end_speed = send_archive($files[$i], $socket);
+		
+		$size  = $get_size_end_speed[0];
+		$speed = $get_size_end_speed[1];
 		
 		$speed_vector[$i] = $speed;
+		$size_vector[$i]  = $size;
 
 	}
-	staticts($speed_vector);
+	staticts($speed_vector,$size_vector);
 }
 
 function create_socket(){
 
 	$sh = socket_create(AF_INET,SOCK_STREAM,SOL_TCP);
 
-	if(socket_bind($sh, '127.0.0.1', 4242)){
+	if(socket_bind($sh, '192.168.100.180', 4242)){
 		echo "Socket liga corretamente. <br/>";
 	
 	}else{
@@ -39,7 +42,7 @@ function create_socket(){
 		exit(0);
 	}
 
-	if(socket_connect($sh, '127.0.0.1', 4242) == TRUE){
+	if(socket_connect($sh, '192.168.100.205', 111) == TRUE){
 		echo "Socket conectado. <br/>";
 	
 	}else{
@@ -51,7 +54,7 @@ function create_socket(){
 
 function send_file($file , $size , $sh){
 
-	if(socket_sendto($sh, $file, $size, 0x8, '127.0.0.1', 4242) == TRUE){
+	if(socket_sendto($sh, $file, $size, 0x8, '192.168.100.205', 111) == TRUE){
 		$time_after_send = microtime(true);
 		return $time_after_send;
 	}
@@ -65,7 +68,7 @@ function send_file($file , $size , $sh){
 function send_archive($file_to_send , $sh){
 
 	$file = file_get_contents('archives_connectionspeed/'.$file_to_send);
-	$size = strlen($file)/1024; //megabytes
+	$size = strlen($file)/1024; //Kilobytes
 
 	$time_before_send = microtime(true);
 	$time_after_send = send_file($file, $size, $sh);
@@ -73,22 +76,19 @@ function send_archive($file_to_send , $sh){
 
 	$total_time = $time_after_send - $time_before_send;
 
-
 	$speed = $size/$total_time;
-	$speed = $speed/1000; //milisegundos
 
 	$size_and_speed = array($size, $speed);
 
 	return $size_and_speed;
 }
 
-function staticts($speed_vector){
+function staticts($speed_vector,$size_vector){
 	
-	$tam = count($speed_vector);
-	$sum = array_sum($speed_vector);
-	$media = $sum/$tam;
+	$media = array_sum($speed_vector)/count($speed_vector);
 
-	echo 'Media: '.number_format($media, 2, ',', '.');
+	echo 'Sua velocidade de conexão é de: '.number_format($media, 2, ',', '.').' Kbps <br/>';
+	echo 'Foram enviados: '.array_sum($size_vector). ' Kb <br/>';
 }
 
 ?>
