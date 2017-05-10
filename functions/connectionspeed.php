@@ -1,7 +1,7 @@
 <?php
 
 //main
-$files = array('102kb.php', '178kb.pdf','220kb.pdf', '606kb.pdf', '1.6mb.pdf', '1mb.pdf', '2mb.pdf', '3mb.pdf', '4mb.pdf','6.7mb.pdf');
+$files = array('100Kb.txt', '200Kb.txt','400Kb.txt', '800Kb.txt', '1Mb.txt', '2Mb.txt', '10Mb.txt', '20Mb.txt',);
 $tamanho = count($files);
 
 send_archives_multiples_times();
@@ -85,12 +85,7 @@ function send_archive($file_to_send , $sh){
 function staticts($speed_vector){
 	
 	$tam = count($speed_vector);
-	$sum = 0;
-	//fazer um vetor com todas as velocidades para ver a media	
-	for($i = 0; $i < $tam ; $i++){
-		
-		$sum = $sum + $speed_vector[$i];		
-	}
+	$sum = array_sum($speed_vector);
 	$media = $sum/$tam;
 
 	echo 'Media: '.number_format($media, 2, ',', '.');
