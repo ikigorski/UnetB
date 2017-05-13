@@ -1,5 +1,5 @@
 <?php
-	
+
 	session_start();
 	if(empty($_POST['email']) || empty($_POST['password'])){
 		header('location:http://localhost/UnetB/views/user-register-view.php');

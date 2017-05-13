@@ -6,15 +6,15 @@
 		exit;
 	}
 
-	$email    = $_POST['email'];
 	$password = $_POST['password'];
+	$email    = $_POST['email'];
 
 	require_once "../classes/class-UnetbDB.php";   //arquivo para a classe que conecta ao banco de dados
 	require_once "../functions/hash.php";		   //arquivos para gerar o hash para a senha
 
 	//Conecta ao bando de dados
 	$mySQL = new MySQL;
-	$executaQuery = $mySQL->executeQuery("SELECT * FROM `user` WHERE (`email` = '". $email ."') LIMIT 1");
+	$executaQuery = $mySQL->executeQuery("SELECT * FROM 'user' WHERE ('email' = '". $email ."') LIMIT 1");
 	$mySQL->disconnect();
 
 	$resultado = mysqli_fetch_assoc($executaQuery);// Salva os dados encontados na variável $resultado
