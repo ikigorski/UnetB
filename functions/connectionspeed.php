@@ -34,7 +34,7 @@ function create_socket(){
 
 	$sh = socket_create(AF_INET,SOCK_STREAM,SOL_TCP);
 
-	if(socket_bind($sh, '192.168.100.180', 4242)){
+	if(socket_bind($sh, '127.0.0.1', 4242)){
 		echo "Socket liga corretamente. <br/>";
 	
 	}else{
@@ -42,7 +42,7 @@ function create_socket(){
 		exit(0);
 	}
 
-	if(socket_connect($sh, '192.168.100.205', 111) == TRUE){
+	if(socket_connect($sh, '127.0.0.1', 4242) == TRUE){
 		echo "Socket conectado. <br/>";
 	
 	}else{
@@ -54,7 +54,7 @@ function create_socket(){
 
 function send_file($file , $size , $sh){
 
-	if(socket_sendto($sh, $file, $size, 0x8, '192.168.100.205', 111) == TRUE){
+	if(socket_sendto($sh, $file, $size, 0x8, '127.0.0.1', 4242)){
 		$time_after_send = microtime(true);
 		return $time_after_send;
 	}

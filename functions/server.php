@@ -3,7 +3,7 @@
 $server_listening;
 
 $sh = socket_create(AF_INET,SOCK_STREAM,SOL_TCP);
-if(socket_bind($sh, '192.168.100.205', 4242)){
+if(socket_bind($sh, '145.14.144.143', 4242)){
 		echo "Socket liga corretamente. <br/>";
 		exit();}
 
