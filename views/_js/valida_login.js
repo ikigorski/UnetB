@@ -56,6 +56,8 @@ function validaLogin(evt){
 					}
 					else{
 						caixa_login = document.getElementById('msg-login');
+						caixa_login.className = 'msg-erro';
+						caixa_login.style.fontSize = "20px";
 						formataErro(caixa_login,' Usuário ou senha inválido');
 					}
 				}
@@ -66,14 +68,12 @@ function validaLogin(evt){
 
 /* Função para formatar as mansagens de erro*/
 function formataErro(elemento,texto){
-	document.getElementById('msg-login').className = 'msg-erro';
 	elemento.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>" + texto;
 	elemento.style.display = 'block';
 }
 
 /* Função para formatar as mansagens de sucesso*/
-function formataSuccess(elemento,texto){
-	document.getElementById('msg-login').className = 'msg-success';
+function formataSuccess(elemento,texto){	
 	elemento.innerHTML = "<span class='glyphicon glyphicon glyphicon-ok' aria-hidden='true'></span>" + texto;
 	elemento.style.display = 'block';
 }
