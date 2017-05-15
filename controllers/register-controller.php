@@ -37,13 +37,13 @@
 //*****************************************************************************************************************************	
 
 	if(check_on_database($email, "email"))
-		header('location:http://localhost/UnetB/views/user-register-view.php?email');
+		echo " Email já existe.";
 
 	else{
 		if(registeruser())
-			header('location:http://localhost/UnetB/views/user-register-view.php?success');
+			echo " Cadastro realizado com sucesso.";
 			
 		else
-			header('location:http://localhost/UnetB/views/user-register-view.php?error');
+			echo " Erro ao conectar ao banco de dados.";
 	}
 ?>

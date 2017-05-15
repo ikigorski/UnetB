@@ -1,9 +1,9 @@
-/* Atribui ao evento submit do formulário a função de validação de dados */
-var form = document.getElementById("form-contato");
-if (form.addEventListener) {                   
-    form.addEventListener("submit", validaCadastro);
-} else if (form.attachEvent) {                  
-    form.attachEvent("onsubmit", validaCadastro);
+/* Atribui ao evento click do formulário a função de validação de dados */
+var form = document.getElementById("botao_cadastro");
+if (form.addEventListener){
+    form.addEventListener("click", validaCadastro);
+} else if (form.attachEvent){
+    form.attachEvent("onclick", validaCadastro);
 }
 
 /* Função para validar os dados antes da submissão dos dados */
@@ -68,48 +68,47 @@ function validaCadastro(evt){
 		}
 	}
 
-	caixa_cadastro = document.querySelector('.msg-cadastro');
+	caixa_cadastro = document.getElementById('msg-cadastro');
 	caixa_cadastro.style.display = 'none';
 
 	if(contErro > 0){
 		evt.preventDefault();
+	}else{
+		$(document).ready( function(){
+
+			$.ajax({
+				url: '../controllers/register-controller.php',
+				method: 'post',
+				data: $('#form-contato').serialize(),
+				success: function(data){
+
+					caixa_cadastro = document.getElementById('msg-cadastro');
+
+					if(data == ' Cadastro realizado com sucesso.'){
+						$('#email').val('');
+						$('#password').val('');
+						$('#confpass').val('');
+						$('#name').val('');
+						formataSuccess(caixa_cadastro,data);
+					}
+					else{
+						formataErro(caixa_cadastro,data);
+					}
+				}
+			});
+		});
 	}
-}		
+}	
 /* Função para formatar as mansagens de erro*/
 function formataErro(elemento,texto){
+	document.getElementById('msg-cadastro').className = 'msg-erro';
 	elemento.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>" + texto;
-	elemento.style.color = '#a94442';
-	elemento.style.backgroundColor = '#f2dede';
-	elemento.style.padding ="2px";
-	elemento.style.border ='1px solid #ebccd1';
 	elemento.style.display = 'block';
-	
 }
 
 /* Função para formatar as mansagens de sucesso*/
 function formataSuccess(elemento,texto){
+	document.getElementById('msg-cadastro').className = 'msg-success';
 	elemento.innerHTML = "<span class='glyphicon glyphicon glyphicon-ok' aria-hidden='true'></span>" + texto;
-	elemento.style.color = '#3c763d';
-	elemento.style.backgroundColor = '#dff0d8';
-	elemento.style.padding ="2px";
-	elemento.style.border ='1px solid #d6e9c6';
 	elemento.style.display = 'block';
-	
-}
-
-var url = window.location.search;
-
-if(url == "?email"){	
-	caixa_cadastro = document.querySelector('.msg-cadastro');
-	formataErro(caixa_cadastro,' E-mail já cadastrado.');
-
-}else if(url == "?error"){
-	caixa_cadastro = document.querySelector('.msg-cadastro');
-	formataErro(caixa_cadastro,' Erro interno ao realizar o cadastro.');
-
-}else if(url == "?success"){
-	caixa_cadastro = document.querySelector('.msg-cadastro');
-	formataSuccess(caixa_cadastro,' Cadastro realizado com sucesso.');
-	window.setTimeout("location.href='login-view.php'",4000);
-
 }
