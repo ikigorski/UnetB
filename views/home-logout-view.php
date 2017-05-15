@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-	<!-- INCLUE O HEAD NA PÁGINA -->
-	<?php include "_includes/head.php";?>
+	<head>
+
+		<script src="_js/bootstrap.js"></script> <!-- Carrega JS do bootstrap-->
+		<script src="_js/jquery.min.js"></script> <!-- Carrega JS jquery-->
+
+		<!-- INCLUE O HEAD NA PÁGINA -->
+		<?php include "_includes/head.php";?>
+
+	</head>
  
 	<body> 	
 		

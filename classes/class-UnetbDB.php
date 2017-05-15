@@ -29,8 +29,6 @@
 
 			if($this->result = mysqli_query($this->condb,$query))
 				return $this->result;
-			else
-				return false;
 		}
 
 		public function disconnect(){ //Esta função desconecta do Banco

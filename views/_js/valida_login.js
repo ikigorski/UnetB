@@ -1,13 +1,13 @@
-/* Atribui ao evento submit do formulário a função de validação de dados */
-var form = document.getElementById("form-contato");
-if (form.addEventListener) {                   
-    form.addEventListener("submit", validaCadastro);
-} else if (form.attachEvent) {                  
-    form.attachEvent("onsubmit", validaCadastro);
+/* Atribui ao evento click do formulário a função de validação de dados */
+var form = document.getElementById("botao_login");
+if (form.addEventListener){
+	form.addEventListener("click", validaLogin);
+} else if (form.attachEvent){
+	form.attachEvent("onclick", validaLogin);
 }
 
 /* Função para validar os dados antes da submissão dos dados */
-function validaCadastro(evt){
+function validaLogin(evt){
 	
 	var email = document.getElementById('email');
 	var password = document.getElementById('password');
@@ -38,27 +38,42 @@ function validaCadastro(evt){
 		caixa_password.style.display = 'none';
 	}
 	
-	caixa_login = document.querySelector('.msg-login');
+	caixa_login = document.getElementById('msg-login');
 	caixa_login.style.display = 'none';
 	
 	if(contErro > 0){
 		evt.preventDefault();
+	}else{
+		$(document).ready( function(){
+
+			$.ajax({
+				url: '../controllers/login-controller.php',
+				method: 'post',
+				data: $('#form-login').serialize(),
+				success: function(data){
+					if(data == 'logado'){
+						window.location.replace("http://localhost/UnetB/views/home-login-view.php");
+					}
+					else{
+						caixa_login = document.getElementById('msg-login');
+						formataErro(caixa_login,' Usuário ou senha inválido');
+					}
+				}
+			});
+		});
 	}
 }
 
 /* Função para formatar as mansagens de erro*/
 function formataErro(elemento,texto){
+	document.getElementById('msg-login').className = 'msg-erro';
 	elemento.innerHTML = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>" + texto;
-	elemento.style.color = '#a94442';
-	elemento.style.backgroundColor = '#f2dede';
-	elemento.style.padding ="2px";
-	elemento.style.border ='1px solid #ebccd1';
 	elemento.style.display = 'block';
 }
 
-var url = window.location.search;
-if(url == "?failed"){
-	caixa_login = document.querySelector('.msg-login');
-	formataErro(caixa_login,' Usuário ou senha inválido.');
-	window.history.pushState("http://localhost/UnetB/views/login-view.php");
+/* Função para formatar as mansagens de sucesso*/
+function formataSuccess(elemento,texto){
+	document.getElementById('msg-login').className = 'msg-success';
+	elemento.innerHTML = "<span class='glyphicon glyphicon glyphicon-ok' aria-hidden='true'></span>" + texto;
+	elemento.style.display = 'block';
 }

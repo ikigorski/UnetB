@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-	<script src="_js/jquery.min.js"></script> <!-- Carrega JS jquery-->
-	<script src="_js/bootstrap.js"></script> <!-- Carrega JS do bootstrap-->
+	<head>
 
-	<!-- INCLUE O HEAD NA PÁGINA -->
-	<?php include "_includes/head.php";?>
-	
-	<script>
+		<script src="_js/jquery.min.js"></script> <!-- Carrega JS jquery-->
+		<script src="_js/bootstrap.js"></script> <!-- Carrega JS do bootstrap-->
 
-	</script>
+		<!-- INCLUE O HEAD NA PÁGINA -->
+		<?php include "_includes/head.php";?>
 
-</head>
+	</head>
+
 	<body>
 
 		<!-- INCLUE O HEADER NA PÁGINA -->
@@ -26,7 +24,7 @@
 							
 							<center><h1 class="title-form">Cadastro</h1></center>
 							
-							<form action="" method="post" id='form-contato' enctype='multipart/form-data'>
+							<form action="" method="post" id='form-cadastro' enctype='multipart/form-data'>
 
 								<div class="form-group">
 									<label for="email">*E-mail</label>
@@ -54,6 +52,7 @@
 
 								<input type="hidden" name="acao" value="incluir">
 								<button  value="" type="button" class="btn btn-primary btn-lg btn-block" id='botao_cadastro'>Gravar</button><br/>
+								
 								<span class='' id='msg-cadastro'></span>
 
 							</form><!-- /formulário-->
@@ -66,7 +65,4 @@
 
 	<script src="_js/valida_cadastro.js"></script> <!-- Carrega JS para validar cadastro-->
 	</body>
-	
-	
-
 </html>

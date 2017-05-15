@@ -1,13 +1,14 @@
 /* Atribui ao evento click do formulário a função de validação de dados */
 var form = document.getElementById("botao_cadastro");
 if (form.addEventListener){
-    form.addEventListener("click", validaCadastro);
+	form.addEventListener("click", validaCadastro);
 } else if (form.attachEvent){
-    form.attachEvent("onclick", validaCadastro);
+	form.attachEvent("onclick", validaCadastro);
 }
 
 /* Função para validar os dados antes da submissão dos dados */
 function validaCadastro(evt){
+
 	var name = document.getElementById('name');
 	var email = document.getElementById('email');
 	var password = document.getElementById('password');
@@ -79,7 +80,7 @@ function validaCadastro(evt){
 			$.ajax({
 				url: '../controllers/register-controller.php',
 				method: 'post',
-				data: $('#form-contato').serialize(),
+				data: $('#form-cadastro').serialize(),
 				success: function(data){
 
 					caixa_cadastro = document.getElementById('msg-cadastro');

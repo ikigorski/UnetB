@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-	<!-- INCLUE O HEAD NA PÁGINA -->
-	<?php include "_includes/head.php";?>
+	<head>
+
+		<script src="_js/jquery.min.js"></script> <!-- Carrega JS jquery-->
+		<script src="_js/bootstrap.js"></script> <!-- Carrega JS do bootstrap-->
+
+		<!-- INCLUE O HEAD NA PÁGINA -->
+		<?php include "_includes/head.php";?>
+
+	</head>
 
 	<body>
 
@@ -17,7 +24,7 @@
 							
 							<center><h1 class="title-form">Login</h1></center>
 							
-							<form action="../controllers/login-controller.php" method="post" id='form-contato' enctype='multipart/form-data'>
+							<form action='' method="post" id='form-login' enctype='multipart/form-data'>
 
 								<div class="form-group">
 									<label for="email">E-mail</label>
@@ -33,8 +40,9 @@
 
 
 								<input type="hidden" name="acao" value="incluir">
-								<button type="submit" class="btn btn-primary btn-lg btn-block" id='botao'>Entrar</button><br/>
-								<span class="msg-erro msg-login"></span>
+								<button type="button" class="btn btn-primary btn-lg btn-block" id='botao_login'>Entrar</button><br/>
+								
+								<span class='' id='msg-login'></span>
 
 							</form><!-- /formulário-->
 							
@@ -43,10 +51,7 @@
 				</div> <!-- /conteiner-->
 			</div> <!-- filho -->
 		</div> <!-- pai -->
-
-	</body>
-
+	
 	<script src="_js/valida_login.js"></script> <!-- Carrega JS para validar login-->
-	<script src="_js/jquery.min.js"></script> <!-- Carrega JS jquery-->
-	<script src="_js/bootstrap.js"></script> <!-- Carrega JS do bootstrap-->
+	</body>	
 </html>
