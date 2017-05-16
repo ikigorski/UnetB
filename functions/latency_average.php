@@ -10,7 +10,7 @@ function pingDomain($domain){
     else {
         fclose($file);
         $status = ($stoptime - $starttime) * 1000;
-        $status = floor($status); // função para arredonda
+        $status = floor($status); // função para arredondar o valor numérico
     }
     return $status . ' ms';
 }
