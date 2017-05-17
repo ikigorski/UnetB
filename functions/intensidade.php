@@ -8,8 +8,8 @@ function checkPacketLoss() {
     //Executa comando na máquina para pegar a intensidade do sinal de WiFi.
 
     $output = shell_exec($command);
-
-    echo getSignalLevel($output); exit;
+    $slevel=getSignalLevel($output);
+    echo $slevel; exit;
     // a função preg_match retorna um valor para saber se obtivemos sucesso ou não na busca. Neste casso ela irá procurar no resultado do comando acima a porcentagem de perda de pacotes, e armazená-la na variável martch.
 
    {
