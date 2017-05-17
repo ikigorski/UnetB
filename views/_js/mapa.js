@@ -27,19 +27,45 @@ function initMap() {
 
 
   // Marcador personalizado;
-  // var image = 'https://cdn1.iconfinder.com/data/icons/gpsmapicons/blue/gpsmapicons01.png';
+  // var image = 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m';
   var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
       // icon: image,
       title: 'ICC',
       animation: google.maps.Animation.DROP
-});
+    });
 
     marker.addListener('click', function(){
       internetInfo.open(map, marker);
     });
-}  
+
+  //  Teste de Geolocalização
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+            };
+
+        infoWindow.setPosition(pos);
+        infoWindow.setContent('Location found.');
+        map.setCenter(pos);
+        }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+        });
+        } else {
+          // Navegador não suporta geolocalização
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+}
 
 // Função para carregamento assíncrono
 function loadScript() {
