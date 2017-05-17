@@ -28,7 +28,7 @@ function initMap() {
       map: map,
       icon: image,
       title: 'ICC',
-      animation: google.maps.Animation.DROP
+      animation: google.maps.Animation.BOUNCE
 });
 }
 
