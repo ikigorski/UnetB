@@ -19,18 +19,27 @@ function initMap() {
   // Exibir o mapa na div #mapa;
   var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
+  var contentString = 'TESTE';
+
+  var internetInfo= new google.maps.InfoWindow({
+      content: contentString
+  }) 
 
 
   // Marcador personalizado;
-  var image = 'https://cdn1.iconfinder.com/data/icons/gpsmapicons/blue/gpsmapicons01.png';
-  var marcadorPersonalizado = new google.maps.Marker({
+  // var image = 'https://cdn1.iconfinder.com/data/icons/gpsmapicons/blue/gpsmapicons01.png';
+  var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
-      icon: image,
+      // icon: image,
       title: 'ICC',
-      animation: google.maps.Animation.BOUNCE
+      animation: google.maps.Animation.DROP
 });
-}
+
+    marker.addListener('click', function(){
+      internetInfo.open(map, marker);
+    });
+}  
 
 // Função para carregamento assíncrono
 function loadScript() {
