@@ -6,6 +6,8 @@
 //   });
 // }
 
+
+
 function initMap() {
 
   // Exibir mapa;
@@ -19,7 +21,7 @@ function initMap() {
   // Exibir o mapa na div #mapa;
   var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  var contentString = 'TESTE';
+  var contentString = 'Caso o usuário não permita o acesso a sua localização';
 
   var internetInfo= new google.maps.InfoWindow({
       content: contentString
@@ -29,13 +31,12 @@ function initMap() {
   // Marcador personalizado;
   // var image = 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m';
   var marker = new google.maps.Marker({
-      position: myLatlng,
       map: map,
       // icon: image,
-      title: 'ICC',
+      title: 'UnB - essa não é sua localização a não ser que você esteja aqui.',
       animation: google.maps.Animation.DROP
     });
-
+    marker.setPosition(myLatlng);
     marker.addListener('click', function(){
       internetInfo.open(map, marker);
     });
@@ -47,7 +48,7 @@ function initMap() {
           lat: position.coords.latitude,
           lng: position.coords.longitude
             };
-
+        
         infoWindow.setPosition(pos);
         infoWindow.setContent('Location found.');
         map.setCenter(pos);
